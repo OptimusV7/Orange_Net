@@ -45,7 +45,7 @@ class PackageController extends Controller
                 $stk->ResponseDescription = $trimStkPushSimulation->ResponseDescription;
                 $stk->CustomerMessage = $trimStkPushSimulation->CustomerMessage;
                 $stk->user_id = Auth::user()->id;
-                $stk->save();
+                $stk->save(); 
 
                 $request->session()->put('PayProcessing', $trimStkPushSimulation);
 
