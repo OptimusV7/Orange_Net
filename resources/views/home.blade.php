@@ -12,8 +12,93 @@
             </div>
         </div>
         <!-- /Title -->
+        <!-- Row -->
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="hk-row">
+                    <div class="col-lg-12">
+
+                        <div class="hk-row">
+                            <div class="col-sm-6">
+                                <div class="card card-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between mb-5">
+                                            <div>
+                                                <span class="d-block font-15 text-dark font-weight-500">Current Subscription</span>
+                                            </div>
+                                            <div>
+                                                <span class="badge badge-success  badge-md">Active</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="d-block display-5 text-dark mb-5">Bronze Internet</span>
+                                            <small class="d-block">5Mbs Dedicated</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card card-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between mb-5">
+                                            <div>
+                                                <span class="d-block font-15 text-dark font-weight-500">Payments</span>
+                                            </div>
+                                            <div>
+                                                <span class="badge badge-info   badge-md">History</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="d-block display-5 text-dark mb-5">Payments Upto date</span>
+                                            <small class="d-block">Current Subscription 1200Ksh</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card card-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between mb-5">
+                                            <div>
+                                                <span class="d-block font-15 text-dark font-weight-500">Tickets</span>
+                                            </div>
+                                            <div>
+                                                <span class="badge badge-primary  badge-md">Resolved</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="d-block display-5 text-dark mb-5">10 Tickets</span>
+                                            <small class="d-block">All tickets resolved</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card card-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between mb-5">
+                                            <div>
+                                                <span class="d-block font-15 text-dark font-weight-500">Bandwidth</span>
+                                            </div>
+                                            <div>
+                                                <span class="badge badge-info  badge-md">Upstream</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="d-block display-5 text-dark mb-5">25000Mbs Remaining</span>
+                                            <small class="d-block">Allocated Bandwidth</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- /Container -->
+
 
     <!-- Footer -->
     <div class="hk-footer-wrap container">

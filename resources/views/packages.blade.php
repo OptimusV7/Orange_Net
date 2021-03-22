@@ -30,19 +30,18 @@
                                 <div class="col-sm">
                                     <div class="row">
                                         <div class="col-lg-4 col-md-6 col-sm-12 mb-30">
-                                            <div class="card">
+                                            <div class="card card-sm">
                                                 <div class="card-header">
-                                                    Card Header
+                                                    Bronze Package
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Special title treatment</h5>
-                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalForms">
-                                                        Buy Home Package
+                                                    <h5 class="card-title">Home Internet</h5>
+                                                    <p class="card-text">
+                                                        5Mbs Internet Connection. Best to use in small settings
+                                                    </p>
+                                                    <button type="button" class="btn btn-gradient-ashes" data-toggle="modal" data-target="#exampleModalForms">
+                                                        Buy Bronze Package
                                                     </button>
-                                                </div>
-                                                <div class="card-footer text-muted">
-                                                    Card Footer
                                                 </div>
                                                 <!-- Modal forms-->
                                                 <div class="modal fade" id="exampleModalForms" tabindex="-1" role="dialog" aria-labelledby="exampleModalForms" aria-hidden="true">
@@ -74,7 +73,7 @@
                                                                         <input type="number" class="form-control" id="phone" name="phone" aria-describedby="phone" required
                                                                                 maxlength="10">
                                                                     </div>
-                                                                    <button type="submit" class="tst1 btn btn-primary btn-block">Pay</button>
+                                                                    <button type="submit" class="tst1 btn btn-gradient-ashes btn-block">Pay</button>
                                                                 </form>
                                                             </div>
                                                         </div>
@@ -85,29 +84,29 @@
                                         <div class="col-lg-4 col-md-6 col-sm-12 mb-30">
                                             <div class="card card-sm">
                                                 <div class="card-header">
-                                                    Card Header
+                                                    Silver Package
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Special title treatment</h5>
-                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                                    <div id="button" class="btn btn-primary">Go see session</div>
-                                                </div>
-                                                <div class="card-footer text-muted">
-                                                    Card Footer
+                                                    <h5 class="card-title">Fast Internet</h5>
+                                                    <p class="card-text">
+                                                        10Mbs Internet Connection. For Gaming and Streaming HD videos
+                                                    </p>
+                                                    <div id="button" class="btn btn-gradient-ashes">Buy Silver Package</div>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-4 col-md-6 col-sm-12">
-                                            <div class="card">
-                                                <h5 class="card-header">
-														Quote
-													</h5>
+                                            <div class="card card-sm">
+                                                <div class="card-header">
+                                                    Gold Package
+                                                </div>
                                                 <div class="card-body">
-                                                    <blockquote class="blockquote mb-0">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                                                    </blockquote>
+                                                    <h5 class="card-title">Extra Fast Internet</h5>
+                                                    <p class="card-text">
+                                                        25Mbs Internet Connection. For Gaming, Office use and Streaming 4K videos.
+                                                    </p>
+                                                    <div id="button" class="btn btn-gradient-ashes">Buy Gold Package</div>
                                                 </div>
                                             </div>
                                         </div>

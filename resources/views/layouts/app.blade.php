@@ -240,75 +240,75 @@
         @endif
     </script>
 
-{{--    <script>--}}
-{{--        var processing = '{{ Session::get('PayProcessing')}}';--}}
-{{--        var processingError = '{{ Session::get('PayProcessingError') }}';--}}
-{{--        function sample() {--}}
-{{--            if (processing != null){--}}
+    <script>
+        var processing = true;
+        var processingError = true;
+        function sample() {
+            if (processing){
+                $.toast().reset('all');
+                $("body").removeAttr('class');
+                $.toast({
+                    text: '<i class="jq-toast-icon ti-shift-right"></i><p>Success. Request accepted for processing</p> <b>Enter Safaricom Mpesa Pin when prompted</b>',
+                    position: 'top-left',
+                    loaderBg:'#21cf15',
+                    class: 'jq-has-icon jq-toast-success',
+                    hideAfter: 4500,
+                    stack: 6,
+                    showHideTransition: 'fade'
+                });
 
-{{--                $.toast().reset('all');--}}
-{{--                $("body").removeAttr('class');--}}
-{{--                $.toast({--}}
-{{--                    text: '<i class="jq-toast-icon ti-twitter-alt"></i><p>Success. Request accepted for processing</p>',--}}
-{{--                    position: 'top-left',--}}
-{{--                    loaderBg:'#7a5449',--}}
-{{--                    class: 'jq-has-icon jq-toast-success',--}}
-{{--                    hideAfter: 4500,--}}
-{{--                    stack: 6,--}}
-{{--                    showHideTransition: 'fade'--}}
-{{--                });--}}
-{{--                return false;--}}
+                {{Session::forget('PayProcessing')}}
 
-{{--            }--}}
-{{--            if (processingError != null){--}}
-{{--                $.toast().reset('all');--}}
-{{--                $("body").removeAttr('class');--}}
-{{--                $.toast({--}}
-{{--                    text: '<i class="jq-toast-icon ti-twitter-alt"></i><p>A transaction is already in process for the current subscriber</p>',--}}
-{{--                    position: 'top-left',--}}
-{{--                    loaderBg:'#7a5449',--}}
-{{--                    class: 'jq-has-icon jq-toast-warning',--}}
-{{--                    hideAfter: 4500,--}}
-{{--                    stack: 6,--}}
-{{--                    showHideTransition: 'fade'--}}
-{{--                });--}}
-{{--                return false;--}}
-{{--            }--}}
+                // setTimeout(paymentResponse, 9000);
+            }
+            if (processingError){
+                @if(Session::get('PayProcessingError'))
+                $.toast().reset('all');
+                $("body").removeAttr('class');
+                $.toast({
+                    text: '<i class="jq-toast-icon ti-face-sad"></i><p>A transaction is already in process for the current subscriber</p>',
+                    position: 'top-left',
+                    loaderBg:'#7a5449',
+                    class: 'jq-has-icon jq-toast-warning',
+                    hideAfter: 4500,
+                    stack: 6,
+                    showHideTransition: 'fade'
+                });
+                {{Session::forget('PayProcessingError')}}
+                // setTimeout(paymentResponse, 9000);
+                @endif
+            }
+            setTimeout(paymentResponse, 9000);
+            //paymentResponse();
+        }
 
-{{--            $(function (){--}}
-{{--                setTimeout(paymentResponse, 5000);--}}
-{{--            })--}}
+        var responseArrived  = true;
+        function paymentResponse() {
+            if (responseArrived){
+                $.toast().reset('all');
+                $("body").removeAttr('class');
+                $.toast({
+                    text: '<i class="jq-toast-icon ti-import"></i><p>Success. Request received</p>',
+                    position: 'top-left',
+                    loaderBg:'#7a5449',
+                    class: 'jq-has-icon jq-toast-success',
+                    hideAfter: 4500,
+                    stack: 6,
+                    showHideTransition: 'fade'
+                });
 
-{{--        }--}}
+            }
 
-{{--        var responseArrived  =  '{{ Session::get('response') }}';--}}
-{{--        function paymentResponse() {--}}
+        }
 
-{{--            if (responseArrived != null){--}}
-{{--                $.toast().reset('all');--}}
-{{--                $("body").removeAttr('class');--}}
-{{--                $.toast({--}}
-{{--                    text: '<i class="jq-toast-icon ti-twitter-alt"></i><p>Success. Request received</p>',--}}
-{{--                    position: 'top-left',--}}
-{{--                    loaderBg:'#7a5449',--}}
-{{--                    class: 'jq-has-icon jq-toast-success',--}}
-{{--                    hideAfter: 4500,--}}
-{{--                    stack: 6,--}}
-{{--                    showHideTransition: 'fade'--}}
-{{--                });--}}
-{{--                return false;--}}
+        $(function() {
+            $(".tst1").click(function() {
+                sample();
+                //setTimeout(paymentResponse, 8000);
+            });
 
-{{--            }--}}
-
-{{--        }--}}
-
-{{--        $(function() {--}}
-{{--            $(".tst1").click(function() {--}}
-{{--                setTimeout(sample, 4000);--}}
-{{--            });--}}
-
-{{--        });--}}
-{{--    </script>--}}
+        });
+    </script>
 
 
 </body>

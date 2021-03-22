@@ -31,6 +31,8 @@ class PackageController extends Controller
             "Recieved");
 
         $trimStkPushSimulation = json_decode($stkPushSimulation);
+        $stkArrayResponse[] = (array)$trimStkPushSimulation;
+        Log::info('stkResponse', $stkArrayResponse);
 
 //        dd($trimStkPushSimulation->ResponseCode);
 //        exit();
@@ -45,9 +47,10 @@ class PackageController extends Controller
                 $stk->ResponseDescription = $trimStkPushSimulation->ResponseDescription;
                 $stk->CustomerMessage = $trimStkPushSimulation->CustomerMessage;
                 $stk->user_id = Auth::user()->id;
-                $stk->save(); 
+                $stk->save();
 
-                $request->session()->put('PayProcessing', $trimStkPushSimulation);
+                //Session::put('PayProcessing', $trimStkPushSimulation);
+                $request->session()->put('PayProcessing', $respCode);
 
                 return view('packages');
 
@@ -60,7 +63,7 @@ class PackageController extends Controller
                 $stk->save;
 
                 //toastr()->success('Unable to lock subscriber, a transaction is already in process for the current subscriber');
-                $request->session()->put('PayProcessingError', $stkPushSimulation);
+                Session::put('PayProcessingError', $stkPushSimulation->errorCode);
                 return view('home');
             }
 
@@ -73,8 +76,10 @@ class PackageController extends Controller
 
         Log::info("Received callback", $request->all());
         $responseData = $request->all();
-        $responseObject = json_decode($responseData);
-        $request->session()->put('response', $request->all());
+        //$responseObject = json_decode($responseData);
+        $res=Session::put('response', $request->all());
+        dd($res);
+        exit();
         //dd($request->all());
         //
     }
