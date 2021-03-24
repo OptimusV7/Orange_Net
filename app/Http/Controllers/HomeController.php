@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Package;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -29,14 +30,16 @@ class HomeController extends Controller
 
     public function packages()
     {
-        return view('packages');
+        $packages = Package::all();
+        return view('packages', compact('packages'));
     }
 
     public function payment(){
         return view('payments');
     }
 
-    public function checkout(){
-        return view ('checkout');
+    public function checkout($id){
+        $package= Package::where('package_id',$id)->first();
+        return view ('checkout', compact('package'));
     }
 }

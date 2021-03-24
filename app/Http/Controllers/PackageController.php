@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Stk;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use Safaricom\Mpesa\Mpesa;
 use Session;
@@ -12,11 +13,22 @@ use Auth;
 
 class PackageController extends Controller
 {
-    public function buy_packages(Request $request)
+    /**
+     * Get a validator for an incoming payment form request.
+     *
+     * @param  array  $data
+     * @return \Illuminate\Contracts\Validation\Validator
+     */
+    protected function validator(array $data)
     {
-         $this->validate($request,[
-                  'phone'=>'required|max:10',
-               ]);
+        return Validator::make($data, [
+            'phone' => ['required', 'string', 'min:10', 'max:12'],
+        ]);
+    }
+    public function sendRequest(Request $request)
+    {
+        $this->validator($request->all())->validate();
+
         $request->phone   = (substr($request->phone, 0, 1) == '+') ? str_replace('+', '', $request->phone) : $request->phone;
         $request->phone   = (substr($request->phone, 0, 1) == '0') ? preg_replace('/^0/', '254', $request->phone) : $request->phone;
         $ref = Str::random(9);
@@ -74,4 +86,6 @@ class PackageController extends Controller
         return view('payments');
 
     }
+
+
 }

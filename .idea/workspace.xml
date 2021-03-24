@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb5d9c04-bce3-432b-b4c4-89b9811f023a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Package.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_24_180609_create_packages_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Callback.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Callback.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MpesaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/checkout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PackageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PackageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_22_173946_create_callbacks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_22_173946_create_callbacks_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/checkout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/checkout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/packages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/packages.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -185,7 +179,7 @@
       <workItem from="1616415633313" duration="144000" />
       <workItem from="1616415803808" duration="22022000" />
       <workItem from="1616595696725" duration="1864000" />
-      <workItem from="1616601287080" duration="8625000" />
+      <workItem from="1616601287080" duration="13462000" />
     </task>
     <task id="LOCAL-00001" summary="Then we Arrived">
       <created>1616416185659</created>
@@ -215,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616576147382</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added package model and migrations. added callback model and migration.">
+      <created>1616612121660</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1616612121660</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +236,7 @@
     <MESSAGE value="Test change" />
     <MESSAGE value="Changes with toastr and packages layout and home layout" />
     <MESSAGE value="added payments page with table" />
-    <option name="LAST_COMMIT_MESSAGE" value="added payments page with table" />
+    <MESSAGE value="added package model and migrations. added callback model and migration." />
+    <option name="LAST_COMMIT_MESSAGE" value="added package model and migrations. added callback model and migration." />
   </component>
 </project>

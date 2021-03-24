@@ -28,34 +28,40 @@
                         <h5 class="hk-sec-title">Pay Here</h5>
                         <p class="mb-25"> Fill out the Form with accurate date and an *Active Safaricom Number*</p>
                         <div class="row">
-                            @if (count($errors) > 0)
-                                <div class = "alert alert-danger">
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            @endif
+{{--                            @if (count($errors) > 0)--}}
+{{--                                <div class = "alert alert-danger">--}}
+{{--                                    <ul>--}}
+{{--                                        @foreach ($errors->all() as $error)--}}
+{{--                                            <li>{{ $error }}</li>--}}
+{{--                                        @endforeach--}}
+{{--                                    </ul>--}}
+{{--                                </div>--}}
+{{--                            @endif--}}
                             <div class="col-sm">
                                 <form action="{{route('buy_package')}}" method="post">
                                     @csrf
                                     <input type="hidden" name="user_id" value="{{Auth::user()->name}}">
+                                    <input type="hidden" name="amount" value="{{$package->amount}}">
+                                    <div class="form-group">
+                                        <label for="amount" style="font-weight: bolder;"><b>Amount <mark>{{$package->amount}}KSH</mark></b></label>
+
+                                    </div>
                                     <div class="form-group">
                                         <label for="package">Subscipiton package</label>
-                                        <input type="text" class="form-control" id="package" name="package" value="HOME 5MB PACKAGE" readonly>
+                                        <input type="text" class="form-control" id="package" name="package" value="{{$package->name}}" readonly>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="amount">Amount(KSH)</label>
-                                        <input type="email" class="form-control" id="amount" name="amount" value="1" readonly>
-                                    </div>
+
                                     <div class="form-group">
                                         <label for="phone">Phone Number</label>
                                         <small id="phone" class="form-text text-muted">
                                             Please enter a valid Safaricom Phone number.
                                         </small>
-                                        <input type="number" class="form-control" id="phone" name="phone" aria-describedby="phone" required
-                                               maxlength="10">
+                                        <input type="number" class="form-control @error('phone') is-invalid @enderror" id="phone" name="phone"  required>
+                                        @error('phone')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
                                     <hr>
                                     <button type="submit" class="tst1 btn btn-gradient-ashes btn-block">Pay</button>
