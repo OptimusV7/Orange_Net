@@ -34,53 +34,41 @@ class PackageController extends Controller
         $stkArrayResponse[] = (array)$trimStkPushSimulation;
         Log::info('stkResponse', $stkArrayResponse);
 
-//        dd($trimStkPushSimulation->ResponseCode);
-//        exit();
-
         $respCode = $trimStkPushSimulation->ResponseCode;
 
-            if ($respCode == "0") {
-                $stk = new Stk();
-                $stk->ResponseCode = $trimStkPushSimulation->ResponseCode;
-                $stk->MerchantRequestID = $trimStkPushSimulation->MerchantRequestID;
-                $stk->CheckoutRequestID = $trimStkPushSimulation->CheckoutRequestID;
-                $stk->ResponseDescription = $trimStkPushSimulation->ResponseDescription;
-                $stk->CustomerMessage = $trimStkPushSimulation->CustomerMessage;
-                $stk->user_id = Auth::user()->id;
-                $stk->save();
+        if ($respCode == "0") {
+            $request->session()->put('PayProcessing', $respCode);
+            $stk = new Stk();
+            $stk->ResponseCode = $trimStkPushSimulation->ResponseCode;
+            $stk->MerchantRequestID = $trimStkPushSimulation->MerchantRequestID;
+            $stk->CheckoutRequestID = $trimStkPushSimulation->CheckoutRequestID;
+            $stk->ResponseDescription = $trimStkPushSimulation->ResponseDescription;
+            $stk->CustomerMessage = $trimStkPushSimulation->CustomerMessage;
+            $stk->user_id = Auth::user()->id;
+            $stk->save();
 
-                //Session::put('PayProcessing', $trimStkPushSimulation);
-                $request->session()->put('PayProcessing', $respCode);
+            return view('payments');
 
-                return view('packages');
-
-            } elseif ($trimStkPushSimulation->errorCode == "500.001.1001") {
-                $stk = new Stk();
-                $stk->requestId = $trimStkPushSimulation->requestId;
-                $stk->errorCode = $trimStkPushSimulation->errorCode;
-                $stk->errorMessage = $trimStkPushSimulation->errorMessage;
-                $stk->user_id = Auth::user()->id;
-                $stk->save;
-
-                //toastr()->success('Unable to lock subscriber, a transaction is already in process for the current subscriber');
-                Session::put('PayProcessingError', $stkPushSimulation->errorCode);
-                return view('home');
-            }
-
-
-
+        } elseif ($trimStkPushSimulation->errorCode == "500.001.1001") {
+            Session::put('PayProcessingError', $stkPushSimulation->errorCode);
+            $stk = new Stk();
+            $stk->requestId = $trimStkPushSimulation->requestId;
+            $stk->errorCode = $trimStkPushSimulation->errorCode;
+            $stk->errorMessage = $trimStkPushSimulation->errorMessage;
+            $stk->user_id = Auth::user()->id;
+            $stk->save;
+            return view('home');
+        }
         return view('home');
     }
 
     public function callback(Request $request){
-
+        $res=Session::put('response', $request->all());
         Log::info("Received callback", $request->all());
         $responseData = $request->all();
-        //$responseObject = json_decode($responseData);
-        $res=Session::put('response', $request->all());
-        dd($res);
+        var_dump($responseData);
         exit();
-        //dd($request->all());
-        //
+        return view('payments');
+
     }
 }

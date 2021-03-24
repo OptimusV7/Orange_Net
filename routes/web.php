@@ -30,3 +30,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/packages', 'HomeController@packages')->name('packages');
 Route::post('/buy_package', 'PackageController@buy_packages')->name('buy_package');
+Route::get('/payments', 'HomeController@payment')->name('payments');
