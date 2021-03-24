@@ -15,10 +15,14 @@ class CreateCallbacksTable extends Migration
     {
         Schema::create('callbacks', function (Blueprint $table) {
             $table->bigIncrements('callback_id');
+            $table->integer('user_id');
             $table->String('MerchantRequestID');
             $table->String('CheckoutRequestID');
             $table->integer('ResultCode');
-            $table->multiLineString('CallbackMetadata');
+            $table->integer('amount');
+            $table->integer('MpesaReceiptNumber');
+            $table->integer('TransactionDate');
+            $table->integer('PhoneNumber');
             $table->timestamps();
         });
     }

@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //toastr()->success('Welcome');
+
         return view('home');
     }
 
@@ -34,5 +34,9 @@ class HomeController extends Controller
 
     public function payment(){
         return view('payments');
+    }
+
+    public function checkout(){
+        return view ('checkout');
     }
 }

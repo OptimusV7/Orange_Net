@@ -14,6 +14,9 @@ class PackageController extends Controller
 {
     public function buy_packages(Request $request)
     {
+         $this->validate($request,[
+                  'phone'=>'required|max:10',
+               ]);
         $request->phone   = (substr($request->phone, 0, 1) == '+') ? str_replace('+', '', $request->phone) : $request->phone;
         $request->phone   = (substr($request->phone, 0, 1) == '0') ? preg_replace('/^0/', '254', $request->phone) : $request->phone;
         $ref = Str::random(9);
@@ -47,7 +50,7 @@ class PackageController extends Controller
             $stk->user_id = Auth::user()->id;
             $stk->save();
 
-            return view('payments');
+            return redirect()->route('packages');
 
         } elseif ($trimStkPushSimulation->errorCode == "500.001.1001") {
             Session::put('PayProcessingError', $stkPushSimulation->errorCode);

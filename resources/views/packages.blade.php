@@ -28,6 +28,7 @@
                         <p class="mb-40">Here you can choose an internet package that suites you</p>
                         <div class="row">
                             <div class="col-sm">
+
                                 <div class="row">
                                     <div class="col-lg-4 col-md-6 col-sm-12 mb-30">
                                         <div class="card card-sm">
@@ -39,10 +40,11 @@
                                                 <p class="card-text">
                                                     5Mbs Internet Connection. Best to use in small settings
                                                 </p>
-                                                <button type="button" class="btn btn-gradient-ashes" data-toggle="modal" data-target="#exampleModalForms">
+                                                <a href="{{route('checkout')}}" class="btn btn-gradient-ashes" >
                                                     Buy Bronze Package
-                                                </button>
+                                                </a>
                                             </div>
+
                                             <!-- Modal forms-->
                                             <div class="modal fade" id="exampleModalForms" tabindex="-1" role="dialog" aria-labelledby="exampleModalForms" aria-hidden="true">
                                                 <div class="modal-dialog" role="document">
@@ -80,6 +82,7 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-sm-12 mb-30">
                                         <div class="card card-sm">
