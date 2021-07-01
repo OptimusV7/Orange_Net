@@ -81,8 +81,8 @@ class PackageController extends Controller
         $res=Session::put('response', $request->all());
         Log::info("Received callback", $request->all());
         $responseData = $request->all();
-        var_dump($responseData);
-        exit();
+        //var_dump($responseData);
+        //exit();
         return view('payments');
 
     }
