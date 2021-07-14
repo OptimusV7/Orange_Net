@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b4f57448-2709-4f59-a4e9-1d5b2e66ee04" name="OPS" url="https://moya.co.ke">
+        <fileTransfer rootFolder="/var/www/Connect" accessType="SFTP" host="45.32.157.210" port="22" sshConfigId="dc320b4d-c197-4a6f-8848-8b878abd18ec" sshConfig="root@45.32.157.210:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

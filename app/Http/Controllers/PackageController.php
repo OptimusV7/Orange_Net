@@ -10,9 +10,11 @@ use Illuminate\Support\Str;
 use Safaricom\Mpesa\Mpesa;
 use Session;
 use Auth;
+use function MongoDB\BSON\toJSON;
 
 class PackageController extends Controller
 {
+
     /**
      * Get a validator for an incoming payment form request.
      *
@@ -46,6 +48,7 @@ class PackageController extends Controller
             "Recieved");
 
         $trimStkPushSimulation = json_decode($stkPushSimulation);
+
         $stkArrayResponse[] = (array)$trimStkPushSimulation;
         Log::info('stkResponse', $stkArrayResponse);
 
@@ -78,12 +81,25 @@ class PackageController extends Controller
     }
 
     public function callback(Request $request){
-        $res=Session::put('response', $request->all());
+//        Session::put('response', $request->all());
         Log::info("Received callback", $request->all());
         $responseData = $request->all();
-        //var_dump($responseData);
-        //exit();
-        return view('payments');
+        $ress = (array)$responseData;
+        Log::info('RESSSSSSS', $ress['Body']['stkCallback']);
+        $tree = $ress['Body']['stkCallback'];
+        $weare = $tree['ResultCode'];
+
+        if ($weare == '1')
+        {
+            Log::info('GoodGoodGood');
+            Session::put('insufficient_Funds');
+            return view('payments');
+
+        }else  {
+
+            return view('payments');
+        }
+
 
     }
 

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -11,13 +9,17 @@
     <title>{{env('APP_NAME')}} | Dashboard</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('favicon.ico')}}">
+    <link rel="icon" href="{{asset('favicon.ico')}}" type="image/x-icon">
 
     <!-- vector map CSS -->
     <link href="{{ asset('vendors/vectormap/jquery-jvectormap-2.0.3.css')}}" rel="stylesheet" type="text/css" />
 
     <link href="{{ asset('vendors/apexcharts/dist/apexcharts.css')}}" rel="stylesheet" type="text/css" />
+
+    <!-- Data Table CSS -->
+    <link href="{{ asset('vendors/datatables.net-dt/css/jquery.dataTables.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('vendors/datatables.net-responsive-dt/css/responsive.dataTables.min.css')}}" rel="stylesheet" type="text/css" />
 
     <!-- Toggles CSS -->
     <link href="{{ asset('vendors/jquery-toggles/css/toggles.css')}}" rel="stylesheet" type="text/css">
@@ -57,7 +59,7 @@
                     <div class="media">
                         <div class="media-img-wrap">
                             <div class="avatar">
-                                <img src="dist/img/avatar12.jpg" alt="user" class="avatar-img rounded-circle">
+                                <img src="{{asset('dist/img/avatar12.jpg')}}" alt="user" class="avatar-img rounded-circle">
                             </div>
                             <span class="badge badge-success badge-indicator"></span>
                         </div>
@@ -67,6 +69,7 @@
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" data-dropdown-in="flipInX" data-dropdown-out="flipOutX">
+                    <a class="dropdown-item" href="{{url('/')}}"><i class="dropdown-icon zmdi zmdi-globe"></i><span>Website</span></a>
                     <a class="dropdown-item" href=""><i class="dropdown-icon zmdi zmdi-account"></i><span>Profile</span></a>
 
                     <div class="dropdown-divider"></div>
@@ -90,6 +93,53 @@
         <a href="javascript:void(0);" id="hk_nav_close" class="hk-nav-close"><span class="feather-icon"><i data-feather="x"></i></span></a>
         <div class="nicescroll-bar">
             <div class="navbar-nav-wrap">
+                @hasrole('customer')
+                <ul class="navbar-nav flex-column">
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{route('home')}}" >
+                            <span class="feather-icon"><i data-feather="activity"></i></span>
+                            <span class="nav-link-text">Dashboard</span>
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link link-with-badge" href="{{route('packages')}}">
+                            <span class="feather-icon"><i data-feather="package"></i></span>
+                            <span class="nav-link-text">Packages</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('subscriptions')}}">
+                            <span class="feather-icon"><i data-feather="zap"></i></span>
+                            <span class="nav-link-text">Subscriptions</span>
+                        </a>
+                    </li>
+                </ul>
+                <hr class="nav-separator">
+                <div class="nav-header">
+                    <span>History Info</span>
+                    <span>UI</span>
+                </div>
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('payments')}}" >
+                            <span class="feather-icon"><i data-feather="layout"></i></span>
+                            <span class="nav-link-text">Payment History</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('invoices')}}" >
+                            <span class="feather-icon"><i data-feather="file"></i></span>
+                            <span class="nav-link-text">Invoice</span>
+                        </a>
+                    </li>
+
+                </ul>
+                <hr class="nav-separator">
+                @endhasrole
+                @hasrole('admin')
                 <ul class="navbar-nav flex-column">
                     <li class="nav-item active">
                         <a class="nav-link" href="{{route('home')}}" >
@@ -99,30 +149,76 @@
 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link-with-badge" href="{{route('packages')}}">
+                        <a class="nav-link link-with-badge" href="{{route('subscribers.index')}}">
                             <span class="feather-icon"><i data-feather="package"></i></span>
-                            <span class="nav-link-text">Packages</span>
+                            <span class="nav-link-text">Subscribers</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{route('sites.index')}}">
                             <span class="feather-icon"><i data-feather="zap"></i></span>
-                            <span class="nav-link-text">Subscriptions</span>
+                            <span class="nav-link-text">Sites Activation</span>
                         </a>
                     </li>
                 </ul>
                 <hr class="nav-separator">
-                <div class="nav-header">
-                    <span>Activity</span>
-                </div>
                 <ul class="navbar-nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('payments')}}" >
-                            <span class="feather-icon"><i data-feather="layout"></i></span>
-                            <span class="nav-link-text">Payment History</span>
+                        <a class="nav-link" href="{{route('home')}}" >
+                            <span class="feather-icon"><i data-feather="file"></i></span>
+                            <span class="nav-link-text">Services Plan</span>
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-with-badge" href="{{route('packages')}}">
+                            <span class="feather-icon"><i data-feather="package"></i></span>
+                            <span class="nav-link-text">All Payments</span>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('subscriptions')}}">
+                            <span class="feather-icon"><i data-feather="zap"></i></span>
+                            <span class="nav-link-text">Bandwidth Configuration</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);" data-toggle="collapse" data-target="#pages_drp">
+                            <span class="feather-icon"><i data-feather="file-text"></i></span>
+                            <span class="nav-link-text">User Management</span>
+                        </a>
+                        <ul id="pages_drp" class="nav flex-column collapse collapse-level-1">
+                            <li class="nav-item">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('users.index') }}">Manage Users</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('roles.index') }}">Manage Roles</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
+                <hr class="nav-separator">
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('home')}}" >
+                            <span class="feather-icon"><i data-feather="activity"></i></span>
+                            <span class="nav-link-text">Bulk SMS</span>
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('subscriptions')}}">
+                            <span class="feather-icon"><i data-feather="zap"></i></span>
+                            <span class="nav-link-text">Settings</span>
+                        </a>
+                    </li>
+
+                </ul>
+                @endhasrole
             </div>
         </div>
     </nav>
@@ -228,6 +324,7 @@
 <script src="{{ asset('dist/js/vectormap-data.js')}}"></script>
 
 
+
 <!-- Owl JavaScript -->
 <script src="{{ asset('vendors/owl.carousel/dist/owl.carousel.min.js')}}"></script>
 
@@ -242,18 +339,31 @@
 <script>
     @if(Session::has('Login'))
     $.toast({
-        heading: 'Welcome to Customer Portal!',
+        heading: 'Welcome to your Portal!',
         text: '<p>You have successfully Logged In</p>',
         position: 'top-right',
         loaderBg:'#7a5449',
-        class: 'jq-toast-primary',
+        class: 'jq-toast-success',
         hideAfter: 3600,
         stack: 6,
         showHideTransition: 'fade'
     });
     {{Session::forget('Login')}}
+    @elseif(Session::has('insufficient_Funds'))
+    $.toast({
+        heading: 'Payment!',
+        text: '<p>You have insufficient Funds in for this payment</p>',
+        position: 'top-right',
+        loaderBg:'#7a5449',
+        class: 'jq-toast-danger',
+        hideAfter: 3600,
+        stack: 6,
+        showHideTransition: 'fade'
+    });
+    {{Session::forget('insufficient_Funds')}}
     @endif
 </script>
+
 
 {{--<script>--}}
 {{--    var processing = true;--}}

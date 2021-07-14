@@ -33,6 +33,7 @@
                                             <div>
                                                 <span class="d-block display-5 text-dark mb-5">Bronze Internet</span>
                                                 <small class="d-block">5Mbs Dedicated</small>
+                                                <a href="{{route('packages')}}"<button  class="btn btn-sm btn-success">Change Subscription</button></a>
                                             </div>
                                         </div>
                                     </div>
@@ -60,15 +61,15 @@
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between mb-5">
                                                 <div>
-                                                    <span class="d-block font-15 text-dark font-weight-500">Tickets</span>
+                                                    <span class="d-block font-15 text-dark font-weight-500">User account</span>
                                                 </div>
                                                 <div>
-                                                    <span class="badge badge-primary  badge-md">Resolved</span>
+                                                    <span class="badge badge-primary  badge-md">Account number</span>
                                                 </div>
                                             </div>
                                             <div>
-                                                <span class="d-block display-5 text-dark mb-5">10 Tickets</span>
-                                                <small class="d-block">All tickets resolved</small>
+                                                <span class="d-block display-5 text-dark mb-5">{{ Auth::user()->account_number }}</span>
+                                                <small class="d-block">{{ Auth::user()->email }}</small>
                                             </div>
                                         </div>
                                     </div>

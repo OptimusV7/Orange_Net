@@ -11,14 +11,28 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', 'WelcomeController@index')->name('welcome');
 
 Auth::routes();
-
+Route::group(['middleware' => ['auth']], function() {
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/packages', 'HomeController@packages')->name('packages');
 Route::get('/checkout/{id}', 'HomeController@checkout')->name('checkout');
 Route::post('/buy_package', 'PackageController@sendRequest')->name('buy_package');
 Route::get('/payments', 'HomeController@payment')->name('payments');
+Route::get('/invoices', 'InvoiceController@index')->name('invoices');
+Route::get('/subscriptions', 'SubscriptionController@index')->name('subscriptions');
+});
+
+//Admin Routes
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['middleware' => ['auth']], function() {
+    Route::resource('roles', RoleController::class);
+    Route::resource('users', UserController::class);
+    Route::resource('subscribers', SubscribersController::class);
+    Route::resource('sites', SitesController::class);
+});
+
