@@ -2,46 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb5d9c04-bce3-432b-b4c4-89b9811f023a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Bandwidth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/BandwidthController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PlanController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_07_15_082119_create_bandwidths_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/bandwidth/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/bandwidth/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/packages/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/packages/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/RouterController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/RouterUserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Router.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/RouterUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_07_16_052828_create_routers_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_07_16_053150_create_router_users_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/router/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/router/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/router/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/router_user/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/router_user/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/router_user/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Callback.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Callback.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PackageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PackageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SitesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SitesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubscribersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubscribersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubscriptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubscriptionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Package.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Package.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_22_173946_create_callbacks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_22_173946_create_callbacks_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_24_180609_create_packages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_24_180609_create_packages_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/dashboard-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/js/dashboard-data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/toast-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/js/toast-data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/bandwidth/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/bandwidth/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/packages/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/packages/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/payment/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/payment/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/sites/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sites/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/sites/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sites/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/checkout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/checkout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/subscribers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/subscribers/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/packages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/packages.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/payments.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/payments.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/subscription.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subscription.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -206,18 +188,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/bandwidth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/router_user" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Gilbert M\Code\Connect\resources\views\admin\router_user" />
+      <recent name="C:\Users\Gilbert M\Code\Connect\resources\views\admin\router" />
       <recent name="C:\Users\Gilbert M\Code\Connect\resources\views\admin\bandwidth" />
       <recent name="C:\Users\Gilbert M\Code\Connect\resources\views\admin\packages" />
       <recent name="C:\Users\Gilbert M\Code\Connect\resources\views\admin\sites" />
-      <recent name="C:\Users\Gilbert M\Code\Connect\resources\views\admin\users" />
-      <recent name="C:\Users\Gilbert M\Code\Connect\resources\views\admin\subscribers" />
     </key>
   </component>
   <component name="RunManager">
@@ -255,7 +237,7 @@
       <workItem from="1626194893875" duration="17026000" />
       <workItem from="1626243742668" duration="3635000" />
       <workItem from="1626248366167" duration="31926000" />
-      <workItem from="1626325936395" duration="47026000" />
+      <workItem from="1626325936395" duration="62817000" />
     </task>
     <task id="LOCAL-00001" summary="Then we Arrived">
       <created>1616416185659</created>
@@ -313,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626288908266</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added admin set packages, bandwidth, and their pages">
+      <created>1626411665927</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1626411665927</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,6 +326,7 @@
     <MESSAGE value="finished checkout form with validations. added payment model and migration" />
     <MESSAGE value="To continue with packages" />
     <MESSAGE value="Added new pages, permission and front end website." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new pages, permission and front end website." />
+    <MESSAGE value="Added admin set packages, bandwidth, and their pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added admin set packages, bandwidth, and their pages" />
   </component>
 </project>

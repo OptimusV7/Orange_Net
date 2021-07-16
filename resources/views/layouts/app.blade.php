@@ -161,7 +161,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('admin.index')}}">
+                        <a class="nav-link" href="{{route('router.index')}}">
                             <span class="feather-icon"><i data-feather="hard-drive"></i></span>
                             <span class="nav-link-text">Routers Management</span>
                         </a>

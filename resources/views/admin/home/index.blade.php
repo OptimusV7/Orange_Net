@@ -38,8 +38,8 @@
                                                 </div>
                                             </div>
                                             <div>
-                                                <span class="d-block display-5 text-dark mb-5">76.5K</span>
-                                                <small class="d-block">172,458 Target Users</small>
+                                                <span class="d-block display-5 text-dark mb-5">250</span>
+                                                <small class="d-block">1000 Target Users</small>
                                             </div>
                                         </div>
                                     </div>
@@ -56,8 +56,8 @@
                                                 </div>
                                             </div>
                                             <div>
-                                                <span class="d-block display-5 text-dark mb-5">68M</span>
-                                                <small class="d-block">90M Targeted</small>
+                                                <span class="d-block display-5 text-dark mb-5">1200</span>
+                                                <small class="d-block">10000 Targeted</small>
                                             </div>
                                         </div>
                                     </div>
@@ -74,8 +74,8 @@
                                                 </div>
                                             </div>
                                             <div>
-                                                <span class="d-block display-5 text-dark mb-5">73</span>
-                                                <small class="d-block">100 Regular</small>
+                                                <span class="d-block display-5 text-dark mb-5">2</span>
+                                                <small class="d-block">10 Regular</small>
                                             </div>
                                         </div>
                                     </div>
@@ -92,8 +92,8 @@
                                                 </div>
                                             </div>
                                             <div>
-                                                <span class="d-block display-5 text-dark mb-5">$89M</span>
-                                                <small class="d-block">$100M Targeted</small>
+                                                <span class="d-block display-5 text-dark mb-5">73KSH</span>
+                                                <small class="d-block">1M Targeted</small>
                                             </div>
                                         </div>
                                     </div>
@@ -132,97 +132,6 @@
                                         </div>
                                     </div>
                                     <div id="e_chart_4" style="height:300px;"></div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header card-header-action">
-                                    <h6>Country Stats</h6>
-                                    <div class="d-flex align-items-center card-action-wrap">
-                                        <a href="#" class="inline-block refresh mr-15">
-                                            <i class="ion ion-md-arrow-down"></i>
-                                        </a>
-                                        <a href="#" class="inline-block full-screen">
-                                            <i class="ion ion-md-expand"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="card-body pa-0">
-                                    <div class="pa-20">
-                                        <div id="world_map_marker_1" style="height: 360px"></div>
-                                    </div>
-                                    <div class="table-wrap">
-                                        <div class="table-responsive">
-                                            <table class="table table-sm table-striped table-hover mb-0">
-                                                <thead>
-                                                <tr>
-                                                    <th class="w-25">Country</th>
-                                                    <th>Sessions</th>
-                                                    <th>Goals</th>
-                                                    <th>Goals Rate</th>
-                                                    <th>Bounce Rate</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                    <td>Canada</td>
-                                                    <td>55,555</td>
-                                                    <td>210</td>
-                                                    <td>2.46%</td>
-                                                    <td>0.26%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>India</td>
-                                                    <td>24,152</td>
-                                                    <td>135</td>
-                                                    <td>0.58%</td>
-                                                    <td>0.43%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>UK</td>
-                                                    <td>15,640</td>
-                                                    <td>324</td>
-                                                    <td>5.15%</td>
-                                                    <td>2.47%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Botswana</td>
-                                                    <td>12,148</td>
-                                                    <td>854</td>
-                                                    <td>4.19%</td>
-                                                    <td>0.1%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>UAE</td>
-                                                    <td>11,258</td>
-                                                    <td>453</td>
-                                                    <td>8.15%</td>
-                                                    <td>0.14%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Australia</td>
-                                                    <td>10,786</td>
-                                                    <td>376</td>
-                                                    <td>5.48%</td>
-                                                    <td>0.45%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Phillipines</td>
-                                                    <td>9,485</td>
-                                                    <td>63</td>
-                                                    <td>3.51%</td>
-                                                    <td>0.9%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Srilanka</td>
-                                                    <td>1,485</td>
-                                                    <td>63</td>
-                                                    <td>3.51%</td>
-                                                    <td>0.9%</td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -287,117 +196,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
-                                <div class="card-header card-header-action">
-                                    <h6>Recent Activity</h6>
-                                    <div class="d-flex align-items-center card-action-wrap">
-                                        <div class="inline-block dropdown">
-                                            <a class="dropdown-toggle no-caret" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="ion ion-ios-more"></i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <a class="dropdown-item" href="#">Something else here</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="#">Separated link</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="user-activity user-activity-sm">
-                                        <div class="media">
-                                            <div class="media-img-wrap">
-                                                <div class="avatar avatar-xs">
-                                                    <img src="dist/img/avatar2.jpg" alt="user" class="avatar-img rounded-circle">
-                                                </div>
-                                            </div>
-                                            <div class="media-body">
-                                                <div>
-                                                    <span class="d-block mb-5"><span class="font-weight-500 text-dark text-capitalize">Laura Thompson</span><span class="pl-5">joined josh groben team.</span></span>
-                                                    <span class="d-block font-13">3 hours ago</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="media">
-                                            <div class="media-img-wrap">
-                                                <div class="avatar avatar-xs">
-                                                    <img src="dist/img/avatar3.jpg" alt="user" class="avatar-img rounded-circle">
-                                                </div>
-                                            </div>
-                                            <div class="media-body">
-                                                <div>
-                                                    <span class="d-block mb-5"><span class="font-weight-500 text-dark text-capitalize">Meayme Fletcher</span><span class="pl-5">liked photos</span></span>
-                                                    <span class="d-block font-13 mb-10">6 hours ago</span>
-                                                </div>
-                                                <div class="d-flex">
-                                                    <a href="#" class="w-75p mr-10"><img class="card-img-top rounded" src="dist/img/gallery/mock7.jpg" alt="Card image cap"></a>
-                                                    <a href="#" class="w-75p mr-10"><img class="card-img-top rounded" src="dist/img/gallery/mock11.jpg" alt="Card image cap"></a>
-                                                    <a href="#" class="w-75p mr-10"><img class="card-img-top rounded" src="dist/img/gallery/mock12.jpg" alt="Card image cap"></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="media">
-                                            <div class="media-img-wrap">
-                                                <div class="avatar avatar-xs">
-														<span class="avatar-text avatar-text-info rounded-circle">
-																<span class="initial-wrap"><span>B</span></span>
-														</span>
-                                                </div>
-                                            </div>
-                                            <div class="media-body">
-                                                <div>
-                                                    <span class="d-block mb-5"><span class="font-weight-500 text-dark text-capitalize">Billy Flowers</span><span class="pl-5">Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text.</span></span>
-                                                    <span class="d-block font-13">3 days ago</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="media">
-                                            <div class="media-img-wrap">
-                                                <div class="avatar avatar-xs">
-                                                    <img src="dist/img/avatar4.jpg" alt="user" class="avatar-img rounded-circle">
-                                                </div>
-                                            </div>
-                                            <div class="media-body">
-                                                <div>
-                                                    <span class="d-block mb-5"><span class="font-weight-500 text-dark text-capitalize">Morgan Freeman</span><span class="pl-5">joined josh groben team.</span></span>
-                                                    <span class="d-block font-13">3 hours ago</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="media">
-                                            <div class="media-img-wrap">
-                                                <div class="avatar avatar-xs">
-														<span class="avatar-text avatar-text-success rounded-circle">
-																<span class="initial-wrap"><span>M</span></span>
-														</span>
-                                                </div>
-                                            </div>
-                                            <div class="media-body">
-                                                <div>
-                                                    <span class="d-block mb-5"><span class="font-weight-500 text-dark text-capitalize">Meayme Fletcher</span><span class="pl-5">liked photos</span></span>
-                                                    <span class="d-block font-13 mb-10">6 hours ago</span>
-                                                </div>
-                                                <div class="d-flex">
-                                                    <a href="#" class="w-75p mr-10"><img class="card-img-top rounded" src="dist/img/gallery/mock1.jpg" alt="Card image cap"></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="media">
-                                            <div class="media-img-wrap">
-                                                <div class="avatar avatar-xs">
-                                                    <img src="dist/img/avatar6.jpg" alt="user" class="avatar-img rounded-circle">
-                                                </div>
-                                            </div>
-                                            <div class="media-body">
-                                                <div>
-                                                    <span class="d-block mb-5"><span class="font-weight-500 text-dark text-capitalize">Evie Ono</span><span class="pl-5">joined josh groben team.</span></span>
-                                                    <span class="d-block font-13">3 hours ago</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
                     </div>
@@ -407,22 +205,6 @@
         </div>
         <!-- /Container -->
 
-        <!-- Footer -->
-        <div class="hk-footer-wrap container">
-            <footer class="footer">
-                <div class="row">
-                    <div class="col-md-6 col-sm-12">
-                        <p>Pampered by<a href="https://hencework.com/" class="text-dark" target="_blank">Hencework</a> © 2019</p>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                        <p class="d-inline-block">Follow us</p>
-                        <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span class="btn-icon-wrap"><i class="fa fa-facebook"></i></span></a>
-                        <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span class="btn-icon-wrap"><i class="fa fa-twitter"></i></span></a>
-                        <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span class="btn-icon-wrap"><i class="fa fa-google-plus"></i></span></a>
-                    </div>
-                </div>
-            </footer>
-        </div>
-        <!-- /Footer -->
+
     </div>
 @endsection

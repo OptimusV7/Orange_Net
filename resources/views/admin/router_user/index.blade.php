@@ -5,8 +5,8 @@
         <!-- Breadcrumb -->
         <nav class="hk-breadcrumb" aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-light bg-transparent">
-                <li class="breadcrumb-item"><a href="#">Site Activation Management</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Site</li>
+                <li class="breadcrumb-item"><a href="#">User Router Management</a></li>
+                <li class="breadcrumb-item active" aria-current="page">User Router</li>
             </ol>
         </nav>
         <!-- /Breadcrumb -->
@@ -16,11 +16,9 @@
 
             <!-- Title -->
             <div class="hk-pg-header">
-                <h4 class="hk-pg-title"><span class="pg-title-icon"><span class="feather-icon"><i data-feather="database"></i></span></span>Site Activation</h4>
+                <h4 class="hk-pg-title"><span class="pg-title-icon"><span class="feather-icon"><i data-feather="database"></i></span></span>User Router Management</h4>
                 <div class="d-flex">
-                    <a href="#" class="text-secondary mr-15"><span class="feather-icon"><i data-feather="printer"></i></span></a>
-                    <a href="#" class="text-secondary mr-15"><span class="feather-icon"><i data-feather="download"></i></span></a>
-                    <a href="{{ route('sites.create') }}"><button class="btn btn-primary btn-sm">Add New Site</button></a>
+                    <a href="{{ route('bandwidth.create') }}"><button class="btn btn-primary btn-sm">Assign Router To User</button></a>
                 </div>
             </div>
             <!-- /Title -->
@@ -35,8 +33,8 @@
             <div class="row">
                 <div class="col-xl-12">
                     <section class="hk-sec-wrapper">
-                        <h5 class="hk-sec-title">Current Sites</h5>
-                        <p class="mb-40">All Sites </p>
+                        <h5 class="hk-sec-title">Current Bandwidths</h5>
+                        <p class="mb-40">All bandwidths configured  </p>
                         <div class="row">
                             <div class="col-sm">
                                 <div class="table-wrap">
@@ -44,26 +42,26 @@
                                         <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Building Name</th>
-                                            <th>Location</th>
-                                            <th>Units</th>
+                                            <th>Name</th>
+                                            <th>Speeds</th>
+                                            <th>Date From</th>
+                                            <th>Date To</th>
                                             <th width="280px">Action</th>
 
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach ($data as $key => $site)
+                                        @foreach ($data as $key => $sub)
                                             <tr>
                                                 <td>{{ ++$i }}</td>
-                                                <td>{{ $site->building_name }}</td>
-                                                <td>{{ $site->location }}</td>
+                                                <td>{{ $sub->name }}</td>
+                                                <td>{{ $sub->speeds }}</td>
+                                                <td>{{ $sub->date_from }}</td>
+                                                <td>{{ $sub->date_to  }}</td>
                                                 <td>
-                                                    {{ $site->units }}
-                                                </td>
-                                                <td>
-{{--                                                    <a class="btn btn-sm btn-info" href="{{ route('sites.show',$site->id) }}">Show</a>--}}
-                                                    <a class="btn btn-sm btn-primary" href="{{ route('sites.edit',$site->id) }}">Edit</a>
-                                                    {!! Form::open(['method' => 'DELETE','route' => ['sites.destroy', $site->id],'style'=>'display:inline']) !!}
+                                                    {{--<a class="btn btn-sm btn-info" href="{{ route('sites.show',$sub->id) }}">Show</a>--}}
+                                                    <a class="btn btn-sm btn-primary" href="{{ route('bandwidth.edit',$sub->id) }}">Edit</a>
+                                                    {!! Form::open(['method' => 'DELETE','route' => ['bandwidth.destroy', $sub->id],'style'=>'display:inline']) !!}
                                                     {!! Form::submit('Delete', ['class' => 'btn btn-sm btn-danger']) !!}
                                                     {!! Form::close() !!}
                                                 </td>

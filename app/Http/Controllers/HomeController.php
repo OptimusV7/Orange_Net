@@ -28,9 +28,14 @@ class HomeController extends Controller
                 ['subscription_status', '=', 'Active']
             ])->first();
         ;
-        $packageData = Package::where('name', $data->package_name)->first();
-        return view('home',compact('data', 'packageData'));
-
+        if ($data == "")
+        {
+            return view('home',compact('data'));
+        }
+        else{
+            $packageData = Package::where('name', $data->package_name)->first();
+            return view('home',compact('data', 'packageData'));
+        }
 
     }
 
@@ -41,7 +46,8 @@ class HomeController extends Controller
     }
 
     public function payment(Request $request){
-        $data = Subscription::orderBy('id','ASC')->paginate(10);
+        $user = auth()->user()->name;
+        $data = Subscription::where('user_id',$user )->orderBy('id','ASC')->paginate(10);
         return view('payments',compact('data'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
 

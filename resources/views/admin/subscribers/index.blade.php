@@ -32,23 +32,36 @@
                                     <table id="datable_1" class="table table-hover w-100 display pb-30">
                                         <thead>
                                         <tr>
+                                            <th>Trn Ref</th>
                                             <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
+                                            <th>Phone</th>
+                                            <th>Package</th>
+                                            <th>Amount</th>
                                             <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>Expire date</th>
+                                            <th>Router Status</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>Serge Baldwin</td>
-                                            <td>Data Coordinator</td>
-                                            <td>Singapore</td>
-                                            <td>64</td>
-                                            <td>2012/04/09</td>
-                                            <td>$138,575</td>
-                                        </tr>
+                                        @foreach ($data as $key => $sub)
+                                            <tr>
+                                                <td>{{$sub->txn_ref}}</td>
+                                                <td>{{$sub->user_id}}</td>
+                                                <td>{{$sub->msisdn}}</td>
+                                                <td>{{$sub->package_name}}</td>
+                                                <td>{{$sub->amount}}</td>
+                                                <td>{{$sub->subscription_date}}</td>
+                                                <td>{{$sub->expire_date}}</td>
+                                                <td>
+                                                    @if($sub->subscription_status == "Active")
+                                                        <label class="badge badge-success">{{$sub->router_ip}}-{{ $sub->subscription_status }}</label>
+                                                    @endif
+                                                    @if($sub->subscription_status == "Deactivate")
+                                                        <label class="badge badge-danger">{{$sub->router_ip}}-{{ $sub->subscription_status }}</label>
+                                                    @endif
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                         </tbody>
                                     </table>
                                 </div>

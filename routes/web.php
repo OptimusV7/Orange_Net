@@ -29,8 +29,6 @@ Route::group(['middleware' => ['auth']], function() {
 
 //Admin Routes
 
-
-
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
@@ -40,5 +38,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('payment', SubscriptionController::class);
     Route::resource('bandwidth', BandwidthController::class);
     Route::resource('admin', AdminController::class);
+    Route::resource('router', RouterController::class);
+    Route::resource('router_user', RouterUserController::class);
 });
 

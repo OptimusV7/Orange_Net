@@ -3,14 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Subscribers;
+use App\Subscription;
 use Illuminate\Http\Request;
 
 class SubscribersController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.subscribers.index');
+        $data = Subscription::leftjoin('users', 'users.name', '=', 'subscriptions.user_id')
+            ->leftjoin('router_users', 'router_users.username', '=', 'subscriptions.user_id')
+            ->paginate(10,['subscriptions.*', 'users.account_number',  'router_users.router_ip']);
+//        $data = Subscription::join('router_users', 'router_users.username', '=', 'subscriptions.user_id')
+//            ->paginate(10,['subscriptions.*',  'router_users.router_ip'])->;
+//        dd($data);
+        return view('admin.subscribers.index',compact('data'))
+            ->with('i', ($request->input('page', 1) - 1) * 5);
+
     }
 
 

@@ -13,12 +13,13 @@
             </div>
             <!-- /Title -->
             <!-- Row -->
+
             <div class="row">
                 <div class="col-xl-12">
                     <div class="hk-row">
                         <div class="col-lg-12">
-
-                            <div class="hk-row">
+                            @if( $data != null)
+                                <div class="hk-row">
                                 <div class="col-sm-6">
                                     <div class="card card-sm">
                                         <div class="card-body">
@@ -99,6 +100,26 @@
                                     </div>
                                 </div>
                             </div>
+                            @else
+                                <div class="hk-row">
+                                    <div class="col-sm-12">
+                                        <div class="card card-sm">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between mb-5">
+                                                    <div>
+                                                        <span class="d-block font-15 text-dark font-weight-500">No Subscription</span>
+                                                    </div>
+
+                                                </div>
+                                                <div>
+                                                    <span class="d-block display-5 text-dark mb-5">Please subscribe to a Internet Package</span>
+                                                    <a href="{{route('packages')}}"><button  class="btn btn-sm btn-success">Get Subscription</button></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
                         </div>
                     </div>
                 </div>

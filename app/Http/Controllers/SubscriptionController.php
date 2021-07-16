@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class SubscriptionController extends Controller
 {
     public function getSubscription(Request $request){
-        $data = Subscription::orderBy('id','ASC')->paginate(10);
+        $user = auth()->user()->name;
+        $data = Subscription::where('user_id',$user )->orderBy('id','ASC')->paginate(10);
         return view('subscription',compact('data'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
 
@@ -21,7 +22,9 @@ class SubscriptionController extends Controller
      */
     public function index(Request $request)
     {
-        $data = Subscription::orderBy('id','ASC')->paginate(10);
+        $data = Subscription::join('users', 'users.name', '=', 'subscriptions.user_id')
+            ->paginate(10,['subscriptions.*', 'users.account_number']);
+//        $data = Subscription::orderBy('id','ASC')->paginate(10);
         return view('admin.payment.index',compact('data'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }

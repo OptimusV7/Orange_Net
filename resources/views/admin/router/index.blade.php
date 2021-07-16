@@ -5,8 +5,8 @@
         <!-- Breadcrumb -->
         <nav class="hk-breadcrumb" aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-light bg-transparent">
-                <li class="breadcrumb-item"><a href="#">Site Activation Management</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Site</li>
+                <li class="breadcrumb-item"><a href="#">Router Management</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Routers</li>
             </ol>
         </nav>
         <!-- /Breadcrumb -->
@@ -16,11 +16,10 @@
 
             <!-- Title -->
             <div class="hk-pg-header">
-                <h4 class="hk-pg-title"><span class="pg-title-icon"><span class="feather-icon"><i data-feather="database"></i></span></span>Site Activation</h4>
+                <h4 class="hk-pg-title"><span class="pg-title-icon"><span class="feather-icon"><i data-feather="database"></i></span></span>Router Management</h4>
                 <div class="d-flex">
-                    <a href="#" class="text-secondary mr-15"><span class="feather-icon"><i data-feather="printer"></i></span></a>
-                    <a href="#" class="text-secondary mr-15"><span class="feather-icon"><i data-feather="download"></i></span></a>
-                    <a href="{{ route('sites.create') }}"><button class="btn btn-primary btn-sm">Add New Site</button></a>
+                    <a href="{{ route('router_user.create') }}"><button class="btn btn-primary btn-sm mr-15">Assign User To Router</button></a>
+                    <a href="{{ route('router.create') }}"><button class="btn btn-primary btn-sm">Add New Network Router</button></a>
                 </div>
             </div>
             <!-- /Title -->
@@ -35,8 +34,8 @@
             <div class="row">
                 <div class="col-xl-12">
                     <section class="hk-sec-wrapper">
-                        <h5 class="hk-sec-title">Current Sites</h5>
-                        <p class="mb-40">All Sites </p>
+                        <h5 class="hk-sec-title">Current Routers</h5>
+                        <p class="mb-40">All Routers configured  </p>
                         <div class="row">
                             <div class="col-sm">
                                 <div class="table-wrap">
@@ -44,26 +43,37 @@
                                         <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Building Name</th>
+                                            <th>Router IP</th>
                                             <th>Location</th>
-                                            <th>Units</th>
+                                            <th>Bandwidth</th>
+                                            <th>MAC Address</th>
+                                            <th>Status</th>
                                             <th width="280px">Action</th>
 
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach ($data as $key => $site)
+                                        @foreach ($data as $key => $sub)
                                             <tr>
                                                 <td>{{ ++$i }}</td>
-                                                <td>{{ $site->building_name }}</td>
-                                                <td>{{ $site->location }}</td>
+                                                <td>{{ $sub->router_ip }}</td>
+                                                <td>{{ $sub->location }}</td>
+                                                <td>{{ $sub->bandwidth }}</td>
+                                                <td>{{ $sub->mac_address  }}</td>
                                                 <td>
-                                                    {{ $site->units }}
+
+                                                    @if($sub->status == "Off")
+                                                        <label class="badge badge-soft-danger">Deactivated</label>
+                                                    @endif
+                                                    @if($sub->status == "Active")
+                                                        <label class="badge badge-success">Active</label>
+                                                    @endif
+
                                                 </td>
                                                 <td>
-{{--                                                    <a class="btn btn-sm btn-info" href="{{ route('sites.show',$site->id) }}">Show</a>--}}
-                                                    <a class="btn btn-sm btn-primary" href="{{ route('sites.edit',$site->id) }}">Edit</a>
-                                                    {!! Form::open(['method' => 'DELETE','route' => ['sites.destroy', $site->id],'style'=>'display:inline']) !!}
+                                                    {{--<a class="btn btn-sm btn-info" href="{{ route('sites.show',$sub->id) }}">Show</a>--}}
+                                                    <a class="btn btn-sm btn-primary" href="{{ route('router.edit',$sub->id) }}">Edit</a>
+                                                    {!! Form::open(['method' => 'DELETE','route' => ['router.destroy', $sub->id],'style'=>'display:inline']) !!}
                                                     {!! Form::submit('Delete', ['class' => 'btn btn-sm btn-danger']) !!}
                                                     {!! Form::close() !!}
                                                 </td>

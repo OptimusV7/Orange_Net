@@ -41,39 +41,24 @@
                                     <table id="datable_1" class="table table-hover w-100 display pb-30">
                                         <thead>
                                         <tr>
-                                            <th>No</th>
-                                            <th>User Name</th>
-                                            <th>User Email</th>
-                                            <th>Phone</th>
-                                            <th>Package Name</th>
                                             <th>Trn Ref</th>
-                                            <th>Date From</th>
-                                            <th>Date To</th>
+                                            <th>Account</th>
+                                            <th>Amount</th>
+                                            <th>Payment date</th>
+                                            <th>Next Payment</th>
                                             <th>Status</th>
-                                            <th width="280px">Action</th>
-
                                         </tr>
                                         </thead>
                                         <tbody>
                                         @foreach ($data as $key => $sub)
                                             <tr>
-                                                <td>{{ ++$i }}</td>
-                                                <td>{{ $sub->building_name }}</td>
-                                                <td>{{ $sub->location }}</td>
-                                                <td>{{ $sub->location }}</td>
-                                                <td>{{ $sub->location }}</td>
-                                                <td>{{ $sub->location }}</td>
-                                                <td>{{ $sub->location }}</td>
-                                                <td>
-                                                    {{ $sub->units }}
-                                                </td>
-                                                <td>
-                                                    {{--<a class="btn btn-sm btn-info" href="{{ route('sites.show',$sub->id) }}">Show</a>--}}
-                                                    <a class="btn btn-sm btn-primary" href="{{ route('sites.edit',$sub->id) }}">Edit</a>
-                                                    {!! Form::open(['method' => 'DELETE','route' => ['sites.destroy', $sub->id],'style'=>'display:inline']) !!}
-                                                    {!! Form::submit('Delete', ['class' => 'btn btn-sm btn-danger']) !!}
-                                                    {!! Form::close() !!}
-                                                </td>
+                                                <td>{{$sub->txn_ref}}</td>
+                                                <td>{{$sub->account_number}}</td>
+                                                <td>{{$sub->amount}}</td>
+                                                <td>{{$sub->subscription_date}}</td>
+                                                <td>{{$sub->expire_date}}</td>
+                                                <td><label class="badge badge-success">Complete</label></td>
+
                                             </tr>
                                         @endforeach
                                         </tbody>
