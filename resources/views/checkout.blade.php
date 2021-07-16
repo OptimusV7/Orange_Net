@@ -21,6 +21,7 @@
             </div>
             <!-- /Title -->
 
+
             <!-- Row -->
             <div class="row">
                 <div class="col-xl-12">
@@ -28,20 +29,18 @@
                         <h5 class="hk-sec-title">Pay Here</h5>
                         <p class="mb-25"> Fill out the Form with accurate date and an *Active Safaricom Number*</p>
                         <div class="row">
-{{--                            @if (count($errors) > 0)--}}
-{{--                                <div class = "alert alert-danger">--}}
-{{--                                    <ul>--}}
-{{--                                        @foreach ($errors->all() as $error)--}}
-{{--                                            <li>{{ $error }}</li>--}}
-{{--                                        @endforeach--}}
-{{--                                    </ul>--}}
-{{--                                </div>--}}
-{{--                            @endif--}}
+
+                            @if ($message = Session::get('success'))
+                                <div class="alert alert-success">
+                                    <p>{{ $message }}</p>
+                                </div>
+                            @endif
                             <div class="col-sm">
                                 <form action="{{route('buy_package')}}" method="post">
                                     @csrf
                                     <input type="hidden" name="user_id" value="{{Auth::user()->name}}">
                                     <input type="hidden" name="amount" value="{{$package->amount}}">
+                                    <input type="hidden" name="bandwidth" value="{{$package->bandwidth}}">
                                     <div class="form-group">
                                         <label for="amount" style="font-weight: bolder;"><b>Amount <mark>{{$package->amount}}KSH</mark></b></label>
 

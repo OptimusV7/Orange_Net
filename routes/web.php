@@ -14,19 +14,21 @@
 
 Route::get('/', 'WelcomeController@index')->name('welcome');
 
+
+
 Auth::routes();
 Route::group(['middleware' => ['auth']], function() {
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/packages', 'HomeController@packages')->name('packages');
-Route::get('/checkout/{id}', 'HomeController@checkout')->name('checkout');
-Route::post('/buy_package', 'PackageController@sendRequest')->name('buy_package');
-Route::get('/payments', 'HomeController@payment')->name('payments');
-Route::get('/invoices', 'InvoiceController@index')->name('invoices');
-Route::get('/subscriptions', 'SubscriptionController@index')->name('subscriptions');
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/packages', 'HomeController@packages')->name('packages');
+    Route::get('/checkout/{id}', 'HomeController@checkout')->name('checkout');
+    Route::post('/buy_package', 'PackageController@sendRequest')->name('buy_package');
+    Route::get('/payments', 'HomeController@payment')->name('payments');
+    Route::get('/invoices', 'InvoiceController@index')->name('invoices');
+    Route::get('/subscriptions', 'SubscriptionController@getSubscription')->name('subscriptions');
 });
 
 //Admin Routes
-Route::get('/home', 'HomeController@index')->name('home');
+
 
 
 Route::group(['middleware' => ['auth']], function() {
@@ -34,5 +36,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('users', UserController::class);
     Route::resource('subscribers', SubscribersController::class);
     Route::resource('sites', SitesController::class);
+    Route::resource('package', PlanController::class);
+    Route::resource('payment', SubscriptionController::class);
+    Route::resource('bandwidth', BandwidthController::class);
+    Route::resource('admin', AdminController::class);
 });
 

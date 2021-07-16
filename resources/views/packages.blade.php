@@ -12,6 +12,12 @@
         </nav>
         <!-- /Breadcrumb -->
 
+        @if ($message = Session::get('success'))
+            <div class="alert alert-success">
+                <p>{{ $message }}</p>
+            </div>
+    @endif
+
         <!-- Container -->
         <div class="container">
 
@@ -42,7 +48,7 @@
                                                 <p class="card-text">
                                                     {{$package->description}}
                                                 </p>
-                                                <a href="{{route('checkout',['id'=>$package->package_id])}}" class="btn btn-gradient-ashes">
+                                                <a href="{{route('checkout',['id'=>$package->id])}}" class="btn btn-gradient-ashes">
                                                     Buy {{$package->category}}
                                                 </a>
                                             </div>

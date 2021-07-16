@@ -21,6 +21,15 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
+    public function authenticated()
+    {
+        if(auth()->user()->hasRole('admin'))
+        {
+            return redirect('/admin');
+        }
+
+        return redirect('/home');
+    }
 
     /**
      * Where to redirect users after login.

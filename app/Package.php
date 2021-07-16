@@ -15,7 +15,7 @@ class Package extends Model
      */
     protected $fillable = [
         'name', 'description', 'amount', 'code',
-        'category',
+        'category','status','bandwidth',
     ];
 
 

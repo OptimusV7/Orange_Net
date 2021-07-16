@@ -27,13 +27,18 @@
                                                     <span class="d-block font-15 text-dark font-weight-500">Current Subscription</span>
                                                 </div>
                                                 <div>
-                                                    <span class="badge badge-success  badge-md">Active</span>
+                                                    @if($data->subscription_status == "Active")
+                                                        <label class="badge badge-success badge-md">{{ $data->subscription_status }}</label>
+                                                    @endif
+                                                    @if($data->subscription_status == "Off")
+                                                        <label class="badge badge-danger badge-md">{{ $data->subscription_status }}</label>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <div>
-                                                <span class="d-block display-5 text-dark mb-5">Bronze Internet</span>
-                                                <small class="d-block">5Mbs Dedicated</small>
-                                                <a href="{{route('packages')}}"<button  class="btn btn-sm btn-success">Change Subscription</button></a>
+                                                <span class="d-block display-5 text-dark mb-5">{{$data->package_name}}</span>
+                                                <small class="d-block">{{$packageData->description}}</small>
+                                                <a href="{{route('packages')}}"><button  class="btn btn-sm btn-success">Change Subscription</button></a>
                                             </div>
                                         </div>
                                     </div>
@@ -51,7 +56,8 @@
                                             </div>
                                             <div>
                                                 <span class="d-block display-5 text-dark mb-5">Payments Upto date</span>
-                                                <small class="d-block">Current Subscription 1200Ksh</small>
+                                                <small class="d-block">Next Payment: {{$data->expire_date}}</small>
+                                                <small class="d-block">Current Subscription: {{$data->amount}}KSH</small>
                                             </div>
                                         </div>
                                     </div>
@@ -86,7 +92,7 @@
                                                 </div>
                                             </div>
                                             <div>
-                                                <span class="d-block display-5 text-dark mb-5">25000Mbs Remaining</span>
+                                                <span class="d-block display-5 text-dark mb-5">{{$packageData->bandwidth}} </span>
                                                 <small class="d-block">Allocated Bandwidth</small>
                                             </div>
                                         </div>

@@ -16,7 +16,7 @@ class Callback extends Model
     protected $fillable = [
         'user_id', 'MerchantRequestID', 'CheckoutRequestID', 'ResultCode',
         'amount', 'MpesaReceiptNumber', 'TransactionDate',
-        'PhoneNumber',
+        'PhoneNumber','ResultDesc',
     ];
 
 

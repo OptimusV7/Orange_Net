@@ -61,7 +61,7 @@
                                                     {{ $site->units }}
                                                 </td>
                                                 <td>
-                                                    <a class="btn btn-sm btn-info" href="{{ route('sites.show',$site->id) }}">Show</a>
+{{--                                                    <a class="btn btn-sm btn-info" href="{{ route('sites.show',$site->id) }}">Show</a>--}}
                                                     <a class="btn btn-sm btn-primary" href="{{ route('sites.edit',$site->id) }}">Edit</a>
                                                     {!! Form::open(['method' => 'DELETE','route' => ['sites.destroy', $site->id],'style'=>'display:inline']) !!}
                                                     {!! Form::submit('Delete', ['class' => 'btn btn-sm btn-danger']) !!}

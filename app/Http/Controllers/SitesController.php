@@ -62,7 +62,7 @@ class SitesController extends Controller
         $this->validate($request, [
             'building_name' => 'required',
             'location' => 'required',
-            'unites' => 'required',
+            'units' => 'required',
         ]);
 
         $input = $request->all();

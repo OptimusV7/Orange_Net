@@ -112,8 +112,7 @@
             <div class="col-lg-6 col-md-7">
                 <div class="title-heading mt-4">
                     <div class="alert alert-white alert-pills shadow" role="alert">
-                        <span class="badge rounded-pill bg-danger me-1">v3.0.0</span>
-                        <span class="content"> Build <span class="text-primary">anything</span> you want - {{env('APP_NAME')}}.</span>
+                        <span class="content">Expand <span class="text-primary">Your Connections</span> Now - {{env('APP_NAME')}}.</span>
                     </div>
                     <h1 class="heading mb-3">Leading Internet Business For <span class="text-primary typewrite" data-period="2000" data-type='[ "Streaming", "High Speed Gaming", "Technology", "Video Call", "Software" ]'> <span class="wrap"></span> </span> Solution</h1>
                     <p class="para-desc text-muted">We will provide you internet speeds that are unmatched </p>
@@ -248,6 +247,7 @@
         </div><!--end row-->
 
         <div class="row align-items-center">
+
             @foreach($Packages as $key => $package)
             <div class="col-md-4 col-12 mt-4 pt-2">
 
@@ -266,7 +266,7 @@
                             <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Source Files</li>
                             <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>1 Domain Free</li>
                         </ul>
-                        <a href="{{route('checkout',['id'=>$package->package_id])}}" class="btn btn-primary mt-4">{{$package->name}}</a>
+                        <a href="{{route('checkout',['id'=>$package->id])}}" class="btn btn-primary mt-4">{{$package->name}}</a>
                     </div>
                 </div>
 
@@ -359,7 +359,7 @@
             <div class="col-lg-4 col-md-6 mt-4 pt-2">
                 <div class="card blog rounded border-0 shadow">
                     <div class="position-relative">
-                        <img src="images/blog/01.jpg" class="card-img-top rounded-top" alt="...">
+                        <img src="{{asset('front/images/blog/01.jpg')}}" class="card-img-top rounded-top" alt="...">
                         <div class="overlay rounded-top bg-dark"></div>
                     </div>
                     <div class="card-body content">
@@ -369,7 +369,7 @@
                                 <li class="list-inline-item me-2 mb-0"><a href="javascript:void(0)" class="text-muted like"><i class="uil uil-heart me-1"></i>33</a></li>
                                 <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted comments"><i class="uil uil-comment me-1"></i>08</a></li>
                             </ul>
-                            <a href="page-blog-detail.html" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                            <a href="/" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
                         </div>
                     </div>
                     <div class="author">
@@ -382,7 +382,7 @@
             <div class="col-lg-4 col-md-6 mt-4 pt-2">
                 <div class="card blog rounded border-0 shadow">
                     <div class="position-relative">
-                        <img src="images/blog/02.jpg" class="card-img-top rounded-top" alt="...">
+                        <img src="{{asset('front/images/blog/02.jpg')}}" class="card-img-top rounded-top" alt="...">
                         <div class="overlay rounded-top bg-dark"></div>
                     </div>
                     <div class="card-body content">
@@ -392,7 +392,7 @@
                                 <li class="list-inline-item me-2 mb-0"><a href="javascript:void(0)" class="text-muted like"><i class="uil uil-heart me-1"></i>33</a></li>
                                 <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted comments"><i class="uil uil-comment me-1"></i>08</a></li>
                             </ul>
-                            <a href="page-blog-detail.html" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                            <a href="/" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
                         </div>
                     </div>
                     <div class="author">
@@ -405,7 +405,7 @@
             <div class="col-lg-4 col-md-6 mt-4 pt-2">
                 <div class="card blog rounded border-0 shadow">
                     <div class="position-relative">
-                        <img src="images/blog/03.jpg" class="card-img-top rounded-top" alt="...">
+                        <img src="{{asset('front/images/blog/03.jpg')}}" class="card-img-top rounded-top" alt="...">
                         <div class="overlay rounded-top bg-dark"></div>
                     </div>
                     <div class="card-body content">
@@ -415,7 +415,7 @@
                                 <li class="list-inline-item me-2 mb-0"><a href="javascript:void(0)" class="text-muted like"><i class="uil uil-heart me-1"></i>33</a></li>
                                 <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted comments"><i class="uil uil-comment me-1"></i>08</a></li>
                             </ul>
-                            <a href="page-blog-detail.html" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                            <a href="/" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
                         </div>
                     </div>
                     <div class="author">

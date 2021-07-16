@@ -2,18 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Callback;
+use App\Package;
 use App\Stk;
+use App\Subscription;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
+use Prophecy\Call\Call;
 use Safaricom\Mpesa\Mpesa;
+use safaricom\Mpesa\TransactionCallbacks;
 use Session;
 use Auth;
 use function MongoDB\BSON\toJSON;
 
 class PackageController extends Controller
 {
+
 
     /**
      * Get a validator for an incoming payment form request.
@@ -65,7 +72,36 @@ class PackageController extends Controller
             $stk->user_id = Auth::user()->id;
             $stk->save();
 
-            return redirect()->route('packages');
+            sleep(20);
+
+            $phone = $request->phone;
+
+            $callBack = Callback::latest('PhoneNumber',$phone )->first();
+
+            $result = $callBack['ResultCode'];
+
+            //save to subscription
+            $sub['user_id'] = $request->user_id;
+            $sub['amount'] = $request->amount;
+            $sub['package_name'] = $request->package;
+            $sub['msisdn'] = $request->phone;
+            $sub['txn_ref'] = $ref;
+            $time = Carbon::now();
+            $mytime= $time->toDateTimeString();
+            $sub['subscription_date'] = $mytime;
+            $timeTo = Carbon::now()->addDays(30);
+            $mytimeto= $timeTo->toDateTimeString();
+            $sub['expire_date'] = $mytimeto;
+            $sub['subscription_status'] = "Active";
+
+            Subscription::create($sub);
+
+            if($result == 1)
+            {
+                return redirect()->route('packages')->with('success','Check your Mpesa account and try again');
+            }
+
+            return redirect()->route('subscriptions')->with('success','Payment Recieved!');
 
         } elseif ($trimStkPushSimulation->errorCode == "500.001.1001") {
             Session::put('PayProcessingError', $stkPushSimulation->errorCode);
@@ -81,24 +117,36 @@ class PackageController extends Controller
     }
 
     public function callback(Request $request){
-//        Session::put('response', $request->all());
         Log::info("Received callback", $request->all());
-        $responseData = $request->all();
-        $ress = (array)$responseData;
-        Log::info('RESSSSSSS', $ress['Body']['stkCallback']);
-        $tree = $ress['Body']['stkCallback'];
-        $weare = $tree['ResultCode'];
 
-        if ($weare == '1')
-        {
-            Log::info('GoodGoodGood');
-            Session::put('insufficient_Funds');
-            return view('payments');
 
-        }else  {
+        $callbackJSONData=file_get_contents('php://input');
+        $callbackData=json_decode($callbackJSONData);
+        $resultCode=$callbackData->Body->stkCallback->ResultCode;
+        $resultDesc=$callbackData->Body->stkCallback->ResultDesc;
+        $merchantRequestID=$callbackData->Body->stkCallback->MerchantRequestID;
+        $checkoutRequestID=$callbackData->Body->stkCallback->CheckoutRequestID;
 
-            return view('payments');
-        }
+        $amount=$callbackData->Body->stkCallback->CallbackMetadata->Item[0]->Value;
+        $mpesaReceiptNumber=$callbackData->Body->stkCallback->CallbackMetadata->Item[1]->Value;
+        //$balance=$callbackData->Body->stkCallback->CallbackMetadata->Item[2]->Value;
+        $transactionDate=$callbackData->Body->stkCallback->CallbackMetadata->Item[3]->Value;
+        $phoneNumber=$callbackData->Body->stkCallback->CallbackMetadata->Item[4]->Value;
+
+        $result=[
+            "ResultDesc"=>$resultDesc,
+            "ResultCode"=>$resultCode,
+            "MerchantRequestID"=>$merchantRequestID,
+            "CheckoutRequestID"=>$checkoutRequestID,
+            "amount"=>$amount,
+            "MpesaReceiptNumber"=>$mpesaReceiptNumber,
+            "TransactionDate"=>$transactionDate,
+            "PhoneNumber"=>$phoneNumber
+        ];
+
+        Callback::create($result);
+
+        return true;
 
 
     }

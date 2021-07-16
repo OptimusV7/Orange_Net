@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Spatie\Permission\Models\Role;
 
 class RegisterController extends Controller
 {
@@ -65,11 +66,16 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $account_random_number = random_int(100000, 999999);
-        return User::create([
+        $role = Role::where('name', 'customer')->first();
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'account_number' => $account_random_number,
         ]);
+
+        $user->assignRole($role);
+
+        return $user;
     }
 }

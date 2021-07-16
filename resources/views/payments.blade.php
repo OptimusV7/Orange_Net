@@ -32,23 +32,23 @@
                                     <table id="datable_1" class="table table-hover w-100 display pb-30">
                                         <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>Trn Ref</th>
+                                            <th>Account</th>
+                                            <th>Amount</th>
+                                            <th>Payment date</th>
+                                            <th>Next Payment</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>Serge Baldwin</td>
-                                            <td>Data Coordinator</td>
-                                            <td>Singapore</td>
-                                            <td>64</td>
-                                            <td>2012/04/09</td>
-                                            <td>$138,575</td>
-                                        </tr>
+                                        @foreach ($data as $key => $sub)
+                                            <tr>
+                                                <td>{{$sub->txn_ref}}</td>
+                                                <td>{{Auth::user()->account_number}}</td>
+                                                <td>{{$sub->amount}}</td>
+                                                <td>{{$sub->subscription_date}}</td>
+                                                <td>{{$sub->expire_date}}</td>
+                                            </tr>
+                                        @endforeach
                                         </tbody>
                                     </table>
                                 </div>

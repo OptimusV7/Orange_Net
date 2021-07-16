@@ -112,7 +112,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('subscriptions')}}">
-                            <span class="feather-icon"><i data-feather="zap"></i></span>
+                            <span class="feather-icon"><i data-feather="pocket"></i></span>
                             <span class="nav-link-text">Subscriptions</span>
                         </a>
                     </li>
@@ -125,7 +125,7 @@
                 <ul class="navbar-nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('payments')}}" >
-                            <span class="feather-icon"><i data-feather="layout"></i></span>
+                            <span class="feather-icon"><i data-feather="credit-card"></i></span>
                             <span class="nav-link-text">Payment History</span>
                         </a>
                     </li>
@@ -142,7 +142,7 @@
                 @hasrole('admin')
                 <ul class="navbar-nav flex-column">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{route('home')}}" >
+                        <a class="nav-link" href="{{route('admin.index')}}" >
                             <span class="feather-icon"><i data-feather="activity"></i></span>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
@@ -150,41 +150,47 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link link-with-badge" href="{{route('subscribers.index')}}">
-                            <span class="feather-icon"><i data-feather="package"></i></span>
+                            <span class="feather-icon"><i data-feather="user"></i></span>
                             <span class="nav-link-text">Subscribers</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('sites.index')}}">
-                            <span class="feather-icon"><i data-feather="zap"></i></span>
+                            <span class="feather-icon"><i data-feather="home"></i></span>
                             <span class="nav-link-text">Sites Activation</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('admin.index')}}">
+                            <span class="feather-icon"><i data-feather="hard-drive"></i></span>
+                            <span class="nav-link-text">Routers Management</span>
                         </a>
                     </li>
                 </ul>
                 <hr class="nav-separator">
                 <ul class="navbar-nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('home')}}" >
-                            <span class="feather-icon"><i data-feather="file"></i></span>
+                        <a class="nav-link" href="{{route('package.index')}}" >
+                            <span class="feather-icon"><i data-feather="package"></i></span>
                             <span class="nav-link-text">Services Plan</span>
                         </a>
 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link-with-badge" href="{{route('packages')}}">
-                            <span class="feather-icon"><i data-feather="package"></i></span>
+                        <a class="nav-link link-with-badge" href="{{route('payment.index')}}">
+                            <span class="feather-icon"><i data-feather="credit-card"></i></span>
                             <span class="nav-link-text">All Payments</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('subscriptions')}}">
-                            <span class="feather-icon"><i data-feather="zap"></i></span>
+                        <a class="nav-link" href="{{route('bandwidth.index')}}">
+                            <span class="feather-icon"><i data-feather="git-commit"></i></span>
                             <span class="nav-link-text">Bandwidth Configuration</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0);" data-toggle="collapse" data-target="#pages_drp">
-                            <span class="feather-icon"><i data-feather="file-text"></i></span>
+                            <span class="feather-icon"><i data-feather="user"></i></span>
                             <span class="nav-link-text">User Management</span>
                         </a>
                         <ul id="pages_drp" class="nav flex-column collapse collapse-level-1">
@@ -205,14 +211,14 @@
                 <ul class="navbar-nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('home')}}" >
-                            <span class="feather-icon"><i data-feather="activity"></i></span>
+                            <span class="feather-icon"><i data-feather="mail"></i></span>
                             <span class="nav-link-text">Bulk SMS</span>
                         </a>
 
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('subscriptions')}}">
-                            <span class="feather-icon"><i data-feather="zap"></i></span>
+                            <span class="feather-icon"><i data-feather="settings"></i></span>
                             <span class="nav-link-text">Settings</span>
                         </a>
                     </li>
@@ -335,6 +341,7 @@
 
 <!-- Init JavaScript -->
 <script src="{{ asset('dist/js/init.js')}}"></script>
+<script src="{{ asset('dist/js/dashboard-data.js')}}"></script>
 
 <script>
     @if(Session::has('Login'))
@@ -349,7 +356,10 @@
         showHideTransition: 'fade'
     });
     {{Session::forget('Login')}}
-    @elseif(Session::has('insufficient_Funds'))
+    @endif
+</script>
+<script>
+    @if(Session::has('insufficient_Funds'))
     $.toast({
         heading: 'Payment!',
         text: '<p>You have insufficient Funds in for this payment</p>',

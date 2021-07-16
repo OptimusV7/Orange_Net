@@ -1,19 +1,10 @@
 /*Dashboard Init*/
 /*Dashboard Init*/
- 
-"use strict"; 
+
+"use strict";
 $(document).ready(function() {
 	/*Toaster Alert*/
-	$.toast({
-		heading: 'Well done!',
-		text: '<p>You have successfully completed level 1.</p><button class="btn btn-primary btn-sm mt-10">Play again</button>',
-		position: 'top-right',
-		loaderBg:'#ab26aa',
-		class: 'jq-toast-primary',
-		hideAfter: 3500, 
-		stack: 6,
-		showHideTransition: 'fade'
-	});
+
 	if($('#area_chart').length > 0) {
 		var data=[{
             period: 'Son',
@@ -45,7 +36,7 @@ $(document).ready(function() {
             iphone: 250,
             ipad: 150,
         }];
-		
+
 		var lineChart = Morris.Area({
         element: 'area_chart',
         data: data ,
@@ -75,7 +66,7 @@ $(document).ready(function() {
 				  { y: '300', a: 20, b: 40, c: 50},
 				  { y: '400', a: 50, b: 70, c: 90},
 				  { y: '500', a: 10, b: 40, c: 100},
-				  
+
 				];
 		var lineChart = Morris.Line({
 				element: 'm_chart_4',
@@ -95,14 +86,14 @@ $(document).ready(function() {
 				pointFillColors:['#fff','#fff','#fff'],
 				pointStrokeColors: ['#ab26aa','#97ca5a','#aed67e'],
 				lineColors: ['#ab26aa','#97ca5a','#aed67e'],
-			});	
+			});
 	}
 
-	
+
 });
 
 /*****E-Charts function start*****/
-var echartsConfig = function() { 
+var echartsConfig = function() {
 	if( $('#e_chart_1').length > 0 ){
 		var eChart_1 = echarts.init(document.getElementById('e_chart_1'));
 		var option = {
@@ -120,7 +111,7 @@ var echartsConfig = function() {
 					color: '#324148',
 					fontFamily: '"Poppins", sans-serif',
 					fontSize: 12
-				}	
+				}
 			},
 			series: [
 				{
@@ -143,11 +134,11 @@ var echartsConfig = function() {
 		eChart_1.setOption(option);
 		eChart_1.resize();
 	}
-	
+
 	if( $('#e_chart_3').length > 0 ){
 		var eChart_3 = echarts.init(document.getElementById('e_chart_3'));
 		var option2 = {
-			color: ['#ab26aa', '#bdbdbd','#cecece','#ab26aa','#e2e2e2'],		
+			color: ['#ab26aa', '#bdbdbd','#cecece','#ab26aa','#e2e2e2'],
 			tooltip: {
 				show: true,
 				trigger: 'axis',
@@ -163,9 +154,9 @@ var echartsConfig = function() {
 					color: '#324148',
 					fontFamily: '"Nunito", sans-serif',
 					fontSize: 12
-				}	
+				}
 			},
-			
+
 			grid: {
 				top: '3%',
 				left: '3%',
@@ -253,7 +244,7 @@ var echartsConfig = function() {
 		eChart_3.setOption(option2);
 		eChart_3.resize();
 	}
-	
+
 	if( $('#e_chart_4').length > 0 ){
 		var eChart_4 = echarts.init(document.getElementById('e_chart_4'));
 		var option4 = {
@@ -279,7 +270,7 @@ var echartsConfig = function() {
 						color: '#324148',
 						fontFamily: '"Nunito", sans-serif',
 						fontSize: 12
-					}	
+					}
 				},
 				calculable: true,
 				grid: {
@@ -296,7 +287,7 @@ var echartsConfig = function() {
 							color: '#324148',
 							fontFamily: '"Nunito", sans-serif',
 							fontSize: 12
-						}	
+						}
 					},
 					axisLine: {
 						show:false
@@ -388,11 +379,11 @@ var echartsConfig = function() {
 		eChart_4.setOption(option4);
 		eChart_4.resize();
 	}
-	
+
 }
 /*****E-Charts function end*****/
 
-var sparklineLogin = function() { 
+var sparklineLogin = function() {
 	if( $('#sparkline_1').length > 0 ){
 		$("#sparkline_1").sparkline([2,4,4,6,8,5,6,4,8,6,6,2 ], {
 			type: 'bar',
@@ -401,10 +392,10 @@ var sparklineLogin = function() {
 			barWidth: '5',
 			resize: true,
 			barSpacing: '5',
-			barColor: '#ab26aa',	
+			barColor: '#ab26aa',
 			highlightSpotColor: '#ab26aa'
 		});
-	}	
+	}
 	if( $('#sparkline_2').length > 0 ){
 		$("#sparkline_2").sparkline([2,7,7,5,8,5,4,4,3,4,6,1 ], {
 			type: 'bar',
@@ -413,10 +404,10 @@ var sparklineLogin = function() {
 			barWidth: '5',
 			resize: true,
 			barSpacing: '5',
-			barColor: '#ab26aa',	
+			barColor: '#ab26aa',
 			highlightSpotColor: '#ab26aa'
 		});
-	}	
+	}
 	if( $('#sparkline_3').length > 0 ){
 		$("#sparkline_3").sparkline([9,3,3,2,8,6,4,3,3,2,6,1 ], {
 			type: 'bar',
@@ -425,7 +416,7 @@ var sparklineLogin = function() {
 			barWidth: '5',
 			resize: true,
 			barSpacing: '5',
-			barColor: '#ab26aa',	
+			barColor: '#ab26aa',
 			highlightSpotColor: '#ab26aa'
 		});
 	}
@@ -437,7 +428,7 @@ var sparklineLogin = function() {
 			barWidth: '5',
 			resize: true,
 			barSpacing: '5',
-			barColor: '#ab26aa',	
+			barColor: '#ab26aa',
 			highlightSpotColor: '#ab26aa'
 		});
 	}
@@ -450,11 +441,11 @@ $(window).on("resize", function () {
 	/*Sparkline Resize*/
 	clearTimeout(sparkResize);
 	sparkResize = setTimeout(sparklineLogin, 200);
-	
+
 	/*E-Chart Resize*/
 	clearTimeout(echartResize);
 	echartResize = setTimeout(echartsConfig, 200);
-}).resize(); 
+}).resize();
 /*****Resize function end*****/
 
 /*****Function Call start*****/
