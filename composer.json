@@ -17,7 +17,8 @@
         "laravelcollective/html": "^6.2",
         "safaricom/mpesa": "^1.0",
         "spatie/laravel-permission": "^4.0",
-        "yoeunes/toastr": "^1.2"
+        "yoeunes/toastr": "^1.2",
+      "ext-mysql_xdevapi": "*"
     },
     "require-dev": {
         "facade/ignition": "^1.16.4",

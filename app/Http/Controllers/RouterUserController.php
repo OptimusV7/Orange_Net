@@ -10,6 +10,7 @@ use App\Subscription;
 use App\User;
 use Illuminate\Http\Request;
 use DB;
+use mysql_xdevapi\Exception;
 
 class RouterUserController extends Controller
 {
@@ -48,10 +49,16 @@ class RouterUserController extends Controller
 
         $input['username']= $userid;
 
-        RouterUser::create($input);
-
-        return redirect()->route('router.index')
-            ->with('success','Router User created successfully');
+        $user = RouterUser::where('username', '=', $request->username)->orWhere('router_ip', '=', $request->router_ip);
+        if ($user == null) {
+            RouterUser::create($input);
+            return redirect()->route('router.index')
+                ->with('success','Router User created successfully');
+        }
+        else{
+            return redirect()->route('router_user.create')
+                ->with('success','Router User Already Created, Pick different user and router ip');
+        }
     }
 
 
@@ -84,11 +91,21 @@ class RouterUserController extends Controller
 
         $input['username']= $userid;
 
-        $routerUser = RouterUser::find($id);
-        $routerUser->update($input);
+        $user = RouterUser::where('username', '=', $request->username)->orWhere('router_ip', '=', $request->router_ip);
 
-        return redirect()->route('router.index')
-            ->with('success','Router User updated successfully');
+        if ($user == null) {
+            $routerUser = RouterUser::find($id);
+            $routerUser->update($input);
+
+            return redirect()->route('router.index')
+                ->with('success','Router User updated successfully');
+        }
+        else{
+            return redirect()->route('router_user.create')
+                ->with('success','Router User Already Created, Pick different user and router ip');
+        }
+
+
     }
 
 

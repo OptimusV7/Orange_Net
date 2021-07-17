@@ -21,6 +21,11 @@
                 </ul>
             </div>
         @endif
+        @if ($message = Session::get('success'))
+            <div class="alert alert-danger">
+                <p>{{ $message }}</p>
+            </div>
+        @endif
 
         <!-- Container -->
         <div class="container">

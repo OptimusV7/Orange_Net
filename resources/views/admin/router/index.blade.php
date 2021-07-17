@@ -28,7 +28,8 @@
                 <div class="alert alert-success">
                     <p>{{ $message }}</p>
                 </div>
-        @endif
+            @endif
+
 
         <!-- Row -->
             <div class="row">
@@ -61,14 +62,12 @@
                                                 <td>{{ $sub->bandwidth }}</td>
                                                 <td>{{ $sub->mac_address  }}</td>
                                                 <td>
-
-                                                    @if($sub->status == "Off")
+                                                    @if($sub->status == "Deactivated")
                                                         <label class="badge badge-soft-danger">Deactivated</label>
                                                     @endif
                                                     @if($sub->status == "Active")
                                                         <label class="badge badge-success">Active</label>
                                                     @endif
-
                                                 </td>
                                                 <td>
                                                     {{--<a class="btn btn-sm btn-info" href="{{ route('sites.show',$sub->id) }}">Show</a>--}}

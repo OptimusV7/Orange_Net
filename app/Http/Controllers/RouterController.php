@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Bandwidth;
 use App\Router;
+use App\RouterUser;
 use App\Sites;
 use Illuminate\Http\Request;
 
@@ -16,6 +17,8 @@ class RouterController extends Controller
      */
     public function index(Request $request)
     {
+//        $data = Router::leftjoin('router_users', 'router_users.router_ip', '=', 'routers.router_ip')
+//        ->paginate(10,['routers.*',  'router_users.router_ip' ]);
 
         $data = Router::orderBy('id','ASC')->paginate(10);
         return view('admin.router.index',compact('data'))
