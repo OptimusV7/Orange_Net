@@ -12,11 +12,7 @@
         </nav>
         <!-- /Breadcrumb -->
 
-        @if ($message = Session::get('success'))
-            <div class="alert alert-success">
-                <p>{{ $message }}</p>
-            </div>
-    @endif
+
 
         <!-- Container -->
         <div class="container">
@@ -27,6 +23,14 @@
                                 data-feather="layers"></i></span></span>Internet Packages</h4>
             </div>
             <!-- /Title -->
+            @if ($message = Session::get('success'))
+                <div class="alert alert-success">
+                    <p>{{ $message }}</p>
+                </div>
+            @endif
+            @if(!empty($data))
+                <div class="alert alert-danger"> You have an active subscription already</div>
+            @endif
             <!-- Row -->
             <div class="row">
                 <div class="col-xl-12">

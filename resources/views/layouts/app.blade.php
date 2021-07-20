@@ -166,6 +166,12 @@
                             <span class="nav-link-text">Routers Management</span>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('router.index')}}">
+                            <span class="feather-icon"><i data-feather="user-plus"></i></span>
+                            <span class="nav-link-text">Connection Requests</span>
+                        </a>
+                    </li>
                 </ul>
                 <hr class="nav-separator">
                 <ul class="navbar-nav flex-column">

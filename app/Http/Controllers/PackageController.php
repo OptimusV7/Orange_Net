@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Callback;
 use App\Package;
+use App\RequestCon;
 use App\Stk;
 use App\Subscription;
 use Carbon\Carbon;
@@ -92,7 +93,16 @@ class PackageController extends Controller
             $timeTo = Carbon::now()->addDays(30);
             $mytimeto= $timeTo->toDateTimeString();
             $sub['expire_date'] = $mytimeto;
+
             $sub['subscription_status'] = "Active";
+
+            $requestCon['amount'] = $request->amount;
+            $requestCon['phone'] = $request->phone;
+            $requestCon['username'] = auth()->user()->email;
+            $requestCon['package'] = $request->package;
+            $requestCon['status'] = "Pending Connection";
+
+            RequestCon::create($requestCon);
 
             Subscription::create($sub);
 

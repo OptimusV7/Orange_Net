@@ -23,6 +23,7 @@ class CreateSubscriptionsTable extends Migration
             $table->timestamp('subscription_date');
             $table->string('expire_date');
             $table->boolean('subscription_status')->default(false);
+            $table->boolean('connection_status')->default(false);
             $table->timestamps();
         });
     }

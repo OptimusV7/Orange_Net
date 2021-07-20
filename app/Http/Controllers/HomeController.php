@@ -27,7 +27,7 @@ class HomeController extends Controller
                 ['user_id', '=', $user],
                 ['subscription_status', '=', 'Active']
             ])->first();
-        ;
+
         if ($data == "")
         {
             return view('home',compact('data'));
@@ -41,8 +41,20 @@ class HomeController extends Controller
 
     public function packages()
     {
-        $packages = Package::all()->where('status', true);
-        return view('packages', compact('packages'));
+        $user = auth()->user()->name;
+        $data = Subscription::where('user_id',$user )->first();
+//        dd($data);
+        if ($data != ""){
+            //dd('tt');
+            $packages = Package::all()->where('status', true);
+            return view('packages', compact('packages', 'data'));
+
+        }else{
+            $packages = Package::all()->where('status', true);
+            return view('packages', compact('packages'));
+        }
+
+
     }
 
     public function payment(Request $request){

@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb5d9c04-bce3-432b-b4c4-89b9811f023a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/RequestConController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/RequestCon.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_07_19_054300_create_request_cons_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RouterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RouterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RouterUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RouterUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/router/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/router/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/router_user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/router_user/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PackageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PackageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Subscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Subscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_07_13_053507_create_subscriptions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_07_13_053507_create_subscriptions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/packages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/packages.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/subscription.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subscription.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +226,7 @@
       <workItem from="1626243742668" duration="3635000" />
       <workItem from="1626248366167" duration="31926000" />
       <workItem from="1626325936395" duration="63017000" />
-      <workItem from="1626439463334" duration="12320000" />
+      <workItem from="1626439463334" duration="19532000" />
     </task>
     <task id="LOCAL-00001" summary="Then we Arrived">
       <created>1616416185659</created>
@@ -293,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626434645617</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="made router users only accept one ip&#10;...">
+      <created>1626545854307</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1626545854307</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,6 +331,7 @@
     <MESSAGE value="Added new pages, permission and front end website." />
     <MESSAGE value="Added admin set packages, bandwidth, and their pages" />
     <MESSAGE value="Added router and router users" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added router and router users" />
+    <MESSAGE value="made router users only accept one ip&#10;..." />
+    <option name="LAST_COMMIT_MESSAGE" value="made router users only accept one ip&#10;..." />
   </component>
 </project>
