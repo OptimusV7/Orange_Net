@@ -49,7 +49,7 @@
     <!-- Top Navbar -->
     <nav class="navbar navbar-expand-xl navbar-light fixed-top hk-navbar">
         <a id="navbar_toggle_btn" class="navbar-toggle-btn nav-link-hover" href="javascript:void(0);"><span class="feather-icon"><i data-feather="menu"></i></span></a>
-        <a class="navbar-brand font-weight-700" href="{{url('/')}}">
+        <a class="navbar-brand font-weight-700" href="{{url('/')}}" style="color: #32cd32">
             {{env('APP_NAME')}}
         </a>
         <ul class="navbar-nav hk-navbar-content">
