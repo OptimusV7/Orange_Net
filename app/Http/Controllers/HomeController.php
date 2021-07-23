@@ -24,8 +24,8 @@ class HomeController extends Controller
         $user = auth()->user()->name;
         $data=Subscription::select('*')
             ->where([
-                ['user_id', '=', $user],
-                ['subscription_status', '=', 'Active']
+                ['user_id', '=', $user]
+
             ])->first();
 
         if ($data == "")
