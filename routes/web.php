@@ -40,5 +40,6 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('admin', AdminController::class);
     Route::resource('router', RouterController::class);
     Route::resource('router_user', RouterUserController::class);
+    Route::resource('request_con', RequestConController::class);
 });
 

@@ -96,13 +96,24 @@ class PackageController extends Controller
 
             $sub['subscription_status'] = "Active";
 
-            $requestCon['amount'] = $request->amount;
-            $requestCon['phone'] = $request->phone;
-            $requestCon['username'] = auth()->user()->email;
-            $requestCon['package'] = $request->package;
-            $requestCon['status'] = "Pending Connection";
-
-            RequestCon::create($requestCon);
+//            $existingSub = Subscription::where('user_id',$sub['user_id'] )->get();
+//            if ($existingSub == ""){
+//                $requestCon['amount'] = $request->amount;
+//                $requestCon['phone'] = $request->phone;
+//                $requestCon['username'] = auth()->user()->email;
+//                $requestCon['package'] = $request->package;
+//                $requestCon['status'] = "Pending Connection";
+//
+//                RequestCon::create($requestCon);
+//            }
+//
+//            if ($existingSub->id != null){
+//                $subscription = Subscription::find($existingSub->id);
+//                $sub['subscription_status'] = "Deactivated";
+//                $subscription->update($sub);
+//                $sub['subscription_status'] = "Active";
+//                Subscription::create($sub);
+//            }
 
             Subscription::create($sub);
 

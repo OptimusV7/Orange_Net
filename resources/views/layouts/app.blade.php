@@ -167,7 +167,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('router.index')}}">
+                        <a class="nav-link" href="{{route('request_con.index')}}">
                             <span class="feather-icon"><i data-feather="user-plus"></i></span>
                             <span class="nav-link-text">Connection Requests</span>
                         </a>

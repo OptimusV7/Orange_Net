@@ -38,8 +38,8 @@
                                                 </div>
                                             </div>
                                             <div>
-                                                <span class="d-block display-5 text-dark mb-5">250</span>
-                                                <small class="d-block">1000 Target Users</small>
+                                                <span class="d-block display-5 text-dark mb-5">{{$users}}</span>
+                                                <small class="d-block">100 Target Users</small>
                                             </div>
                                         </div>
                                     </div>
@@ -52,12 +52,12 @@
                                                     <span class="d-block font-15 text-dark font-weight-500">Users</span>
                                                 </div>
                                                 <div>
-                                                    <span class="badge badge-danger   badge-sm">+10%</span>
+                                                    <span class="badge badge-danger badge-sm">+10%</span>
                                                 </div>
                                             </div>
                                             <div>
-                                                <span class="d-block display-5 text-dark mb-5">1200</span>
-                                                <small class="d-block">10000 Targeted</small>
+                                                <span class="d-block display-5 text-dark mb-5">{{$count}}</span>
+                                                <small class="d-block">300 Targeted</small>
                                             </div>
                                         </div>
                                     </div>
@@ -92,8 +92,8 @@
                                                 </div>
                                             </div>
                                             <div>
-                                                <span class="d-block display-5 text-dark mb-5">73KSH</span>
-                                                <small class="d-block">1M Targeted</small>
+                                                <span class="d-block display-5 text-dark mb-5">{{$sum}}KSH</span>
+                                                <small class="d-block">100K Targeted</small>
                                             </div>
                                         </div>
                                     </div>

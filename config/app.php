@@ -163,6 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         \Safaricom\Mpesa\MpesaServiceProvider::class,
+        PragmaRX\Tracker\Vendor\Laravel\ServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -228,6 +229,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Mpesa'=> \Safaricom\Mpesa\MpesaServiceProvider::class,
+        'Tracker' => 'PragmaRX\Tracker\Vendor\Laravel\Facade',
 
     ],
 

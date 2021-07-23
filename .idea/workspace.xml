@@ -2,10 +2,62 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb5d9c04-bce3-432b-b4c4-89b9811f023a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/config/tracker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311070_create_tracker_paths_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311071_create_tracker_queries_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311072_create_tracker_queries_arguments_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311073_create_tracker_routes_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311074_create_tracker_routes_paths_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311075_create_tracker_route_path_parameters_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311076_create_tracker_agents_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311077_create_tracker_cookies_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311078_create_tracker_devices_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311079_create_tracker_domains_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311080_create_tracker_referers_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311081_create_tracker_geoip_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311082_create_tracker_sessions_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311083_create_tracker_errors_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311084_create_tracker_system_classes_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311085_create_tracker_log_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311086_create_tracker_events_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311087_create_tracker_events_log_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311088_create_tracker_sql_queries_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311089_create_tracker_sql_query_bindings_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311090_create_tracker_sql_query_bindings_parameters_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311091_create_tracker_sql_queries_log_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311092_create_tracker_connections_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_07_311093_create_tracker_tables_relations.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_13_311094_create_tracker_referer_search_term_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_03_13_311095_add_tracker_referer_columns.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_11_23_311096_add_tracker_referer_column_to_log.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_11_23_311097_create_tracker_languages_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_11_23_311098_add_language_id_column_to_sessions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_11_23_311099_add_tracker_language_foreign_key_to_sessions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2015_11_23_311100_add_nullable_to_tracker_error.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2017_01_31_311101_fix_agent_name.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2017_06_20_311102_add_agent_name_hash.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2017_12_13_150000_fix_query_arguments.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/connect/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/connect/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/connect/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Connect.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Connect.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sshConfigs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sshConfigs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PackageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PackageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RequestConController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RequestConController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/RequestCon.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/RequestCon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +103,6 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/league/commonmark" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
@@ -152,6 +203,18 @@
       <path value="$PROJECT_DIR$/vendor/yoeunes/toastr" />
       <path value="$PROJECT_DIR$/vendor/safaricom/mpesa" />
       <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
+      <path value="$PROJECT_DIR$/vendor/jaybizzle/crawler-detect" />
+      <path value="$PROJECT_DIR$/vendor/jenssegers/agent" />
+      <path value="$PROJECT_DIR$/vendor/snowplow/referer-parser" />
+      <path value="$PROJECT_DIR$/vendor/ua-parser/uap-php" />
+      <path value="$PROJECT_DIR$/vendor/pragmarx/datatables" />
+      <path value="$PROJECT_DIR$/vendor/pragmarx/support" />
+      <path value="$PROJECT_DIR$/vendor/pragmarx/tracker" />
+      <path value="$PROJECT_DIR$/vendor/mobiledetect/mobiledetectlib" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ptb1puhMFd2CgyFRjwvxxuxGys" />
@@ -169,18 +232,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/router_user" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/connect" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Gilbert M\Code\Connect\resources\views\admin\connect" />
       <recent name="C:\Users\Gilbert M\Code\Connect\resources\views\admin\router_user" />
       <recent name="C:\Users\Gilbert M\Code\Connect\resources\views\admin\router" />
       <recent name="C:\Users\Gilbert M\Code\Connect\resources\views\admin\bandwidth" />
       <recent name="C:\Users\Gilbert M\Code\Connect\resources\views\admin\packages" />
-      <recent name="C:\Users\Gilbert M\Code\Connect\resources\views\admin\sites" />
     </key>
   </component>
   <component name="RunManager">
@@ -219,7 +282,14 @@
       <workItem from="1626243742668" duration="3635000" />
       <workItem from="1626248366167" duration="31926000" />
       <workItem from="1626325936395" duration="63017000" />
-      <workItem from="1626439463334" duration="23020000" />
+      <workItem from="1626439463334" duration="23074000" />
+      <workItem from="1626858041840" duration="202000" />
+      <workItem from="1626858296429" duration="708000" />
+      <workItem from="1626865483504" duration="6751000" />
+      <workItem from="1626941239403" duration="269000" />
+      <workItem from="1626941519115" duration="694000" />
+      <workItem from="1626942595286" duration="881000" />
+      <workItem from="1626943490283" duration="8024000" />
     </task>
     <task id="LOCAL-00001" summary="Then we Arrived">
       <created>1616416185659</created>
@@ -305,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626775519197</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="changed color of logo and logo name to limenet">
+      <created>1626856665224</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1626856665225</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,6 +410,7 @@
     <MESSAGE value="Added router and router users" />
     <MESSAGE value="made router users only accept one ip&#10;..." />
     <MESSAGE value="was going to add connection req" />
-    <option name="LAST_COMMIT_MESSAGE" value="was going to add connection req" />
+    <MESSAGE value="changed color of logo and logo name to limenet" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed color of logo and logo name to limenet" />
   </component>
 </project>

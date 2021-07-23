@@ -31,7 +31,7 @@
                                                     @if($data->subscription_status == "Active")
                                                         <label class="badge badge-success badge-md">{{ $data->subscription_status }}</label>
                                                     @endif
-                                                    @if($data->subscription_status == "Off")
+                                                    @if($data->subscription_status == "Deactivated")
                                                         <label class="badge badge-danger badge-md">{{ $data->subscription_status }}</label>
                                                     @endif
                                                 </div>

@@ -46,8 +46,13 @@
             @if (Route::has('login'))
                 <div class="">
                     @auth
-
+                        @hasrole('customer')
                         <a href="{{ url('/home') }}" class="btn btn-primary-outline">Dashboard</a>
+                        @endhasrole
+                        @hasrole('admin')
+                        <a href="{{ url('/admin') }}" class="btn btn-primary-outline">Dashboard</a>
+                        @endhasrole
+
                     @else
                         <a href="{{ route('login') }}" class="btn btn-primary-outline">Login</a>
 

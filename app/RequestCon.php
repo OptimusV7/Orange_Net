@@ -12,7 +12,7 @@ class RequestCon extends Model
      * @var array
      */
     protected $fillable = [
-        'username', 'phone', 'package','amount','payment','status',
+        'username', 'phone', 'package','amount','status',
     ];
 
     /**
