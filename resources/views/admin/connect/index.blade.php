@@ -74,7 +74,7 @@
                                             <td>
                                                 {{--<a class="btn btn-sm btn-info" href="{{ route('package.show',$package->id) }}">Show</a>--}}
                                                 @if($con->status == "Pending Connection")
-                                                    <a class="btn btn-sm btn-outline-success" href="{{ route('request_con.edit',$con->id) }}">Connect</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('request_con.edit',$con->id) }}">Connect</a>
                                                     {!! Form::open(['method' => 'DELETE','route' => ['request_con.destroy', $con->id],'style'=>'display:inline']) !!}
                                                     {!! Form::submit('Reject', ['class' => 'btn btn-sm btn-danger']) !!}
                                                     {!! Form::close() !!}

@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fb5d9c04-bce3-432b-b4c4-89b9811f023a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PackageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PackageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RequestConController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RequestConController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/connect/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/connect/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/connect/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/connect/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +237,7 @@
       <workItem from="1626941239403" duration="269000" />
       <workItem from="1626941519115" duration="694000" />
       <workItem from="1626942595286" duration="881000" />
-      <workItem from="1626943490283" duration="10448000" />
+      <workItem from="1626943490283" duration="24238000" />
     </task>
     <task id="LOCAL-00001" summary="Then we Arrived">
       <created>1616416185659</created>
@@ -337,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627025429963</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="corrected request connection bug">
+      <created>1627027931396</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1627027931396</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,6 +374,7 @@
     <MESSAGE value="was going to add connection req" />
     <MESSAGE value="changed color of logo and logo name to limenet" />
     <MESSAGE value="added connect page" />
-    <option name="LAST_COMMIT_MESSAGE" value="added connect page" />
+    <MESSAGE value="corrected request connection bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="corrected request connection bug" />
   </component>
 </project>
