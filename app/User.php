@@ -12,6 +12,11 @@ class User extends Authenticatable
     use Notifiable;
     use HasRoles;
 
+    public function getIsAdminAttribute()
+    {
+        return true;
+    }
+
     /**
      * The attributes that are mass assignable.
      *

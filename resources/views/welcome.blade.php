@@ -85,7 +85,6 @@
                 <li><a href="{{ url('/') }}" class="sub-menu-item text-sm-right">Service</a></li>
                 <li><a href="{{ url('/') }}" class="sub-menu-item text-sm-right">FAQ</a></li>
                 <li><a href="{{ url('/') }}" class="sub-menu-item text-sm-right">Coverage</a></li>
-                <li><a href="{{ url('/') }}" class="sub-menu-item text-sm-right">Contact Us</a></li>
             </ul>
             <div class="buy-menu-btn d-none">
                 @if (Route::has('login'))
@@ -384,26 +383,59 @@
                 </div>
             </div><!--end col-->
 
+{{--            <div class="col-lg-4 col-md-6 mt-4 pt-2">--}}
+{{--                <div class="card blog rounded border-0 shadow">--}}
+{{--                    <div class="position-relative">--}}
+{{--                        <img src="{{asset('front/images/blog/02.jpg')}}" class="card-img-top rounded-top" alt="...">--}}
+{{--                        <div class="overlay rounded-top bg-dark"></div>--}}
+{{--                    </div>--}}
+{{--                    <div class="card-body content">--}}
+{{--                        <h5><a href="javascript:void(0)" class="card-title title text-dark">How apps is changing the IT world</a></h5>--}}
+{{--                        <div class="post-meta d-flex justify-content-between mt-3">--}}
+{{--                            <ul class="list-unstyled mb-0">--}}
+{{--                                <li class="list-inline-item me-2 mb-0"><a href="javascript:void(0)" class="text-muted like"><i class="uil uil-heart me-1"></i>33</a></li>--}}
+{{--                                <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted comments"><i class="uil uil-comment me-1"></i>08</a></li>--}}
+{{--                            </ul>--}}
+{{--                            <a href="/" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="author">--}}
+{{--                        <small class="text-light user d-block"><i class="uil uil-user"></i> Calvin Carlo</small>--}}
+{{--                        <small class="text-light date"><i class="uil uil-calendar-alt"></i> 13th August, 2019</small>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div><!--end col-->--}}
+
             <div class="col-lg-4 col-md-6 mt-4 pt-2">
                 <div class="card blog rounded border-0 shadow">
                     <div class="position-relative">
-                        <img src="{{asset('front/images/blog/02.jpg')}}" class="card-img-top rounded-top" alt="...">
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9360848754738617"
+                                crossorigin="anonymous"></script>
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-format="fluid"
+                             data-ad-layout-key="-6o+dl-2l-a4+rs"
+                             data-ad-client="ca-pub-9360848754738617"
+                             data-ad-slot="4728916331"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
                         <div class="overlay rounded-top bg-dark"></div>
                     </div>
-                    <div class="card-body content">
-                        <h5><a href="javascript:void(0)" class="card-title title text-dark">How apps is changing the IT world</a></h5>
-                        <div class="post-meta d-flex justify-content-between mt-3">
-                            <ul class="list-unstyled mb-0">
-                                <li class="list-inline-item me-2 mb-0"><a href="javascript:void(0)" class="text-muted like"><i class="uil uil-heart me-1"></i>33</a></li>
-                                <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted comments"><i class="uil uil-comment me-1"></i>08</a></li>
-                            </ul>
-                            <a href="/" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
-                        </div>
-                    </div>
-                    <div class="author">
-                        <small class="text-light user d-block"><i class="uil uil-user"></i> Calvin Carlo</small>
-                        <small class="text-light date"><i class="uil uil-calendar-alt"></i> 13th August, 2019</small>
-                    </div>
+{{--                    <div class="card-body content">--}}
+{{--                        <h5><a href="javascript:void(0)" class="card-title title text-dark">How apps is changing the IT world</a></h5>--}}
+{{--                        <div class="post-meta d-flex justify-content-between mt-3">--}}
+{{--                            <ul class="list-unstyled mb-0">--}}
+{{--                                <li class="list-inline-item me-2 mb-0"><a href="javascript:void(0)" class="text-muted like"><i class="uil uil-heart me-1"></i>33</a></li>--}}
+{{--                                <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted comments"><i class="uil uil-comment me-1"></i>08</a></li>--}}
+{{--                            </ul>--}}
+{{--                            <a href="/" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="author">--}}
+{{--                        <small class="text-light user d-block"><i class="uil uil-user"></i> Calvin Carlo</small>--}}
+{{--                        <small class="text-light date"><i class="uil uil-calendar-alt"></i> 13th August, 2019</small>--}}
+{{--                    </div>--}}
                 </div>
             </div><!--end col-->
 
@@ -444,11 +476,27 @@
                         <a href="javascript:void(0)" class="btn btn-outline-primary mt-2">Free Trial</a>
                     </div>
                 </div>
+
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9360848754738617"
+                        crossorigin="anonymous"></script>
+                <!-- First Ad -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-9360848754738617"
+                     data-ad-slot="8919442784"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+
             </div><!--end col-->
         </div><!--end row-->
     </div><!--end container-->
 </section><!--end section-->
 <!-- News End -->
+
 
 <!-- Footer Start -->
 <footer class="footer">

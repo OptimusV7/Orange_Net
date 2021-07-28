@@ -15,7 +15,9 @@ class AdminController extends Controller
         $count = User::count();
         $sum = Subscription::sum('amount');
         $users = Tracker::currentSession()->count();
-        return view('admin.home.index', compact('count','sum', 'users'));
+        $usersOnline = Tracker::onlineUsers()->count();
+        $sessions = Tracker::sessions(60 * 24);
+        return view('admin.home.index', compact('count','sum', 'users', 'usersOnline'));
     }
 
     /**

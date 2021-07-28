@@ -11,11 +11,6 @@
                     <h2 class="hk-pg-title font-weight-600 mb-10">Admin Analytics Dashboard</h2>
                     <p>Here you can manage Users, Payments, Subscribers and Internet Bandwidth.</p>
                 </div>
-                <div class="d-flex">
-                    <button class="btn btn-sm btn-outline-light btn-wth-icon icon-wthot-bg mr-15 mb-15"><span class="icon-label"><i class="fa fa-envelope-o"></i> </span><span class="btn-text">Email </span></button>
-                    <button class="btn btn-sm btn-outline-light btn-wth-icon icon-wthot-bg mr-15 mb-15"><span class="icon-label"><i class="fa fa-print"></i> </span><span class="btn-text">Print </span></button>
-                    <button class="btn btn-sm btn-outline-primary btn-wth-icon icon-wthot-bg mb-15"><span class="icon-label"><i class="fa fa-download"></i> </span><span class="btn-text">Export </span></button>
-                </div>
             </div>
             <!-- /Title -->
 
@@ -31,15 +26,15 @@
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between mb-5">
                                                 <div>
-                                                    <span class="d-block font-15 text-dark font-weight-500">Visits</span>
+                                                    <span class="d-block font-15 text-dark font-weight-500">Site Visits</span>
                                                 </div>
                                                 <div>
-                                                    <span class="badge badge-primary  badge-sm">+10%</span>
+                                                    <span class="badge badge-success  badge-sm">Online Users : {{$usersOnline}}</span>
                                                 </div>
                                             </div>
                                             <div>
                                                 <span class="d-block display-5 text-dark mb-5">{{$users}}</span>
-                                                <small class="d-block">100 Target Users</small>
+                                                <small class="d-block">500 Target Users</small>
                                             </div>
                                         </div>
                                     </div>
@@ -49,10 +44,10 @@
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between mb-5">
                                                 <div>
-                                                    <span class="d-block font-15 text-dark font-weight-500">Users</span>
+                                                    <span class="d-block font-15 text-dark font-weight-500">Registered Users</span>
                                                 </div>
                                                 <div>
-                                                    <span class="badge badge-danger badge-sm">+10%</span>
+                                                    <span class="badge badge-success badge-sm">+10%</span>
                                                 </div>
                                             </div>
                                             <div>
@@ -202,6 +197,7 @@
                 </div>
             </div>
             <!-- /Row -->
+
         </div>
         <!-- /Container -->
 

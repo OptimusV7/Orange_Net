@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb5d9c04-bce3-432b-b4c4-89b9811f023a" name="Default Changelist" comment="">
+    <list default="true" id="fb5d9c04-bce3-432b-b4c4-89b9811f023a" name="Default Changelist" comment="added the request connnection update and edit. also view and edit view">
+      <change beforePath="$PROJECT_DIR$/.idea/Connect.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Connect.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RequestConController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RequestConController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/connect/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/connect/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/connect/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/connect/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/tracker.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/tracker.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,6 +172,9 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/vendor/maxmind-db/reader" />
+      <path value="$PROJECT_DIR$/vendor/geoip2/geoip2" />
+      <path value="$PROJECT_DIR$/vendor/maxmind/web-service-common" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ptb1puhMFd2CgyFRjwvxxuxGys" />
@@ -237,7 +249,10 @@
       <workItem from="1626941239403" duration="269000" />
       <workItem from="1626941519115" duration="694000" />
       <workItem from="1626942595286" duration="881000" />
-      <workItem from="1626943490283" duration="24238000" />
+      <workItem from="1626943490283" duration="24385000" />
+      <workItem from="1627367117784" duration="3055000" />
+      <workItem from="1627379890341" duration="11111000" />
+      <workItem from="1627457171945" duration="2773000" />
     </task>
     <task id="LOCAL-00001" summary="Then we Arrived">
       <created>1616416185659</created>
@@ -344,7 +359,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627027931396</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added the request connnection update and edit. also view and edit view">
+      <created>1627123066556</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1627123066557</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,6 +374,18 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -375,6 +409,7 @@
     <MESSAGE value="changed color of logo and logo name to limenet" />
     <MESSAGE value="added connect page" />
     <MESSAGE value="corrected request connection bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="corrected request connection bug" />
+    <MESSAGE value="added the request connnection update and edit. also view and edit view" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the request connnection update and edit. also view and edit view" />
   </component>
 </project>

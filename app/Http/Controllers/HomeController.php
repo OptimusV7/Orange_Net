@@ -11,9 +11,6 @@ use DB;
 
 class HomeController extends Controller
 {
-
-
-
     /**
      * Show the application dashboard.
      *
@@ -43,9 +40,7 @@ class HomeController extends Controller
     {
         $user = auth()->user()->name;
         $data = Subscription::where('user_id',$user )->first();
-//        dd($data);
         if ($data != ""){
-            //dd('tt');
             $packages = Package::all()->where('status', true);
             return view('packages', compact('packages', 'data'));
 
