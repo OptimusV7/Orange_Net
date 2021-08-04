@@ -43,7 +43,8 @@ class PackageController extends Controller
         $request->phone   = (substr($request->phone, 0, 1) == '0') ? preg_replace('/^0/', '254', $request->phone) : $request->phone;
         $ref = Str::random(9);
         $data['user_id'] = $request->user_id;
-        $data['amount'] = $request->amount;
+//        $data['amount'] = $request->amount;
+        $data['amount'] = 1000;
         $data['package'] = $request->package;
         $data['msisdn'] = $request->phone;
         $data['ref'] = $ref;
@@ -58,6 +59,7 @@ class PackageController extends Controller
         $trimStkPushSimulation = json_decode($stkPushSimulation);
 
         $stkArrayResponse[] = (array)$trimStkPushSimulation;
+
         Log::info('stkResponse', $stkArrayResponse);
 
         $respCode = $trimStkPushSimulation->ResponseCode;
@@ -72,6 +74,17 @@ class PackageController extends Controller
             $stk->CustomerMessage = $trimStkPushSimulation->CustomerMessage;
             $stk->user_id = Auth::user()->id;
             $stk->save();
+
+            $phone = $request->phone;
+
+            $callBack = Callback::latest('PhoneNumber',$phone )->first();
+            $result = $callBack['ResultCode'];
+            $resultDesc = $callBack['ResultDesc'];
+
+            if($result == 1 && $resultDesc == "The balance is insufficient for the transaction" || $callBack == null)
+            {
+                return redirect()->route('packages')->with('error' ,'The balance is insufficient for the transaction');
+            }
 
             sleep(20);
 
@@ -140,40 +153,7 @@ class PackageController extends Controller
         return view('home');
     }
 
-    public function callback(Request $request){
-        Log::info("Received callback", $request->all());
 
-
-        $callbackJSONData=file_get_contents('php://input');
-        $callbackData=json_decode($callbackJSONData);
-        $resultCode=$callbackData->Body->stkCallback->ResultCode;
-        $resultDesc=$callbackData->Body->stkCallback->ResultDesc;
-        $merchantRequestID=$callbackData->Body->stkCallback->MerchantRequestID;
-        $checkoutRequestID=$callbackData->Body->stkCallback->CheckoutRequestID;
-
-        $amount=$callbackData->Body->stkCallback->CallbackMetadata->Item[0]->Value;
-        $mpesaReceiptNumber=$callbackData->Body->stkCallback->CallbackMetadata->Item[1]->Value;
-        //$balance=$callbackData->Body->stkCallback->CallbackMetadata->Item[2]->Value;
-        $transactionDate=$callbackData->Body->stkCallback->CallbackMetadata->Item[3]->Value;
-        $phoneNumber=$callbackData->Body->stkCallback->CallbackMetadata->Item[4]->Value;
-
-        $result=[
-            "ResultDesc"=>$resultDesc,
-            "ResultCode"=>$resultCode,
-            "MerchantRequestID"=>$merchantRequestID,
-            "CheckoutRequestID"=>$checkoutRequestID,
-            "amount"=>$amount,
-            "MpesaReceiptNumber"=>$mpesaReceiptNumber,
-            "TransactionDate"=>$transactionDate,
-            "PhoneNumber"=>$phoneNumber
-        ];
-
-        Callback::create($result);
-
-        return true;
-
-
-    }
 
 
 }

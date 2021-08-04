@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb5d9c04-bce3-432b-b4c4-89b9811f023a" name="Default Changelist" comment="added the request connnection update and edit. also view and edit view">
-      <change beforePath="$PROJECT_DIR$/.idea/Connect.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Connect.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="fb5d9c04-bce3-432b-b4c4-89b9811f023a" name="Default Changelist" comment="change sessions and admin controller">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MpesaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/tracker.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/tracker.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PackageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PackageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/packages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/packages.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +244,12 @@
       <workItem from="1626943490283" duration="24385000" />
       <workItem from="1627367117784" duration="3055000" />
       <workItem from="1627379890341" duration="11111000" />
-      <workItem from="1627457171945" duration="2773000" />
+      <workItem from="1627457171945" duration="8632000" />
+      <workItem from="1627908815328" duration="10047000" />
+      <workItem from="1628018221586" duration="788000" />
+      <workItem from="1628022350693" duration="6938000" />
+      <workItem from="1628077507682" duration="10000" />
+      <workItem from="1628104722905" duration="576000" />
     </task>
     <task id="LOCAL-00001" summary="Then we Arrived">
       <created>1616416185659</created>
@@ -366,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627123066557</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="change sessions and admin controller">
+      <created>1627493611860</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1627493611861</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,6 +414,7 @@
     <MESSAGE value="added connect page" />
     <MESSAGE value="corrected request connection bug" />
     <MESSAGE value="added the request connnection update and edit. also view and edit view" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the request connnection update and edit. also view and edit view" />
+    <MESSAGE value="change sessions and admin controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="change sessions and admin controller" />
   </component>
 </project>
