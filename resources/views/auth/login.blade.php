@@ -8,8 +8,8 @@
     <meta name="description" content="A responsive bootstrap 4 admin dashboard template by hencework" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('favicon.png')}}">
+    <link rel="icon" href="{{asset('favicon.png')}}" type="image/x-icon">
 
     <!-- Toggles CSS -->
     <link href="vendors/jquery-toggles/css/toggles.css" rel="stylesheet" type="text/css">
@@ -17,6 +17,9 @@
 
     <!-- Custom CSS -->
     <link href="dist/css/style.css" rel="stylesheet" type="text/css">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9360848754738617"
+            crossorigin="anonymous"></script>
 </head>
 
 <body>

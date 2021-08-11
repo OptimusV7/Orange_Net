@@ -66,8 +66,8 @@
                                                 @if($con->status == "Rejected")
                                                     <label class="badge badge-danger">Rejected</label>
                                                 @endif
-                                                @if($con->status == "Activated")
-                                                    <label class="badge badge-success">Activated</label>
+                                                @if($con->status == "Connected")
+                                                    <label class="badge badge-success">Connected</label>
                                                 @endif
 
                                             </td>

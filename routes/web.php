@@ -43,3 +43,5 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('request_con', RequestConController::class);
 });
 
+Route::get('account/verify/{token}', 'VerifyController@verifyAccount');
+

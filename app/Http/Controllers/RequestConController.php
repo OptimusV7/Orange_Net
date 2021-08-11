@@ -55,8 +55,6 @@ class RequestConController extends Controller
             'username' => 'required',
         ]);
 
-
-
         $user = User::where('email', $request->username)->first();
 
         if ($user == null){
@@ -64,27 +62,29 @@ class RequestConController extends Controller
                 ->with('success','User does not Exit');
         }
 
-        $input['status'] = "Connected";
-        $site = RequestCon::find($id);
-        $site->update($input);
-
-        $input['router_ip'] = $request->router_ip;
-        $input['user_id'] = $user->name;
-        $input['username'] = $user->name;
-        $input['status'] = "Active";
-        $mytime = Carbon::now();
-        $today = $mytime->toDateTimeString();
-        $input['start_date'] = $today;
-        $timeTo = Carbon::now()->addDays(30);
-        $input['expire_date'] =$timeTo  ;
-
         $user = RouterUser::where('username', '=', $request->username)->orWhere('router_ip', '=', $request->router_ip);
+
         if ($user == null) {
+            $input['status'] = "Connected";
+            $site = RequestCon::find($id);
+            $site->update($input);
+
+            $input['router_ip'] = $request->router_ip;
+            $input['user_id'] = $user->name;
+            $input['username'] = $user->name;
+            $input['status'] = "Active";
+            $mytime = Carbon::now();
+            $today = $mytime->toDateTimeString();
+            $input['start_date'] = $today;
+            $timeTo = Carbon::now()->addDays(30);
+            $input['expire_date'] =$timeTo  ;
             RouterUser::create($input);
+
             return redirect()->route('request_con.index')
                 ->with('success','User Connected successfully');
         }
         else{
+
             return redirect()->route('request_con.edit',$id )
                 ->with('success','Router already in use, Pick different router ip');
         }

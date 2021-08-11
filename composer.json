@@ -19,7 +19,8 @@
         "pragmarx/tracker": "^4.0",
         "safaricom/mpesa": "^1.0",
         "spatie/laravel-permission": "^4.0",
-        "yoeunes/toastr": "^1.2"
+        "yoeunes/toastr": "^1.2",
+        "sendgrid/sendgrid": "~7"
     },
     "require-dev": {
         "facade/ignition": "^1.16.4",
