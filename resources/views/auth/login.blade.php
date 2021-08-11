@@ -43,6 +43,11 @@
                                 <a class="auth-brand text-center d-block mb-20" href="{{url('/')}}" style="color: #32cd32">
                                     {{env('APP_NAME')}}
                                 </a>
+                                @if ($message = Session::get('error'))
+                                    <div class="alert alert-danger">
+                                        <p>{{ $message }}</p>
+                                    </div>
+                                @endif
                                 <form method="POST" action="{{ route('login') }}">
                                     @csrf
                                     <h1 class="display-4 text-center mb-10">Welcome Back :)</h1>

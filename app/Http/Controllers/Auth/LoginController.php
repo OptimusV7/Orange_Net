@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -23,12 +25,23 @@ class LoginController extends Controller
 
     public function authenticated()
     {
-        if(auth()->user()->hasRole('admin'))
-        {
-            return redirect('/admin');
+        $email = auth()->user()->email;
+
+        if (auth()->user()->is_email_verified == 1){
+
+            if(auth()->user()->hasRole('admin'))
+            {
+                return redirect('/admin');
+            }
+
+            return redirect('/home');
         }
 
-        return redirect('/home');
+        Auth::logout();
+        Session::flush();
+        return redirect()->route('login')
+            ->with('error','Please verify your Email, Link sent in this mail'. $email );
+
     }
 
     /**
