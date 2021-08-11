@@ -40,7 +40,7 @@ class LoginController extends Controller
         Auth::logout();
         Session::flush();
         return redirect()->route('login')
-            ->with('error','Please verify your Email, Link sent in this mail'. $email );
+            ->with('error','Please verify your Email, Link sent in this mail  -   '. $email );
 
     }
 

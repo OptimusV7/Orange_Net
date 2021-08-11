@@ -63,20 +63,32 @@
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <input id="password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                        <div class="input-group">
+                                        <input id="login_password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                         @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                         @enderror
+                                        <span class="input-group-btn" id="eye_Slash">
+                                               <button class="btn btn-default reveal" onclick="visibility3()" type="button"><i class="fa fa-eye-slash" aria-hidden="true"></i></button>
+                                             </span>
+                                        <span class="input-group-btn" id="eye_Show" style="display: none;">
+                                               <button class="btn btn-default reveal" onclick="visibility3()" type="button"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                             </span>
+
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group">
                                             <input id="password-confirm" type="password" placeholder="Confirm Password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                                            <div class="input-group-append">
-                                                <span class="input-group-text"><span class="feather-icon"><i data-feather="eye-off"></i></span></span>
-                                            </div>
+                                            <span class="input-group-btn" id="eyeSlash">
+                                               <button class="btn btn-default reveal" onclick="visibility4()" type="button"><i class="fa fa-eye-slash" aria-hidden="true"></i></button>
+                                             </span>
+                                            <span class="input-group-btn" id="eyeShow" style="display: none;">
+                                               <button class="btn btn-default reveal" onclick="visibility4()" type="button"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                             </span>
                                         </div>
                                     </div>
                                     <div class="custom-control custom-checkbox mb-25">
@@ -120,6 +132,36 @@
 
     <!-- Init JavaScript -->
     <script src="dist/js/init.js"></script>
+
+    <script>
+        function visibility3() {
+            var x = document.getElementById('login_password');
+            if (x.type === 'password') {
+                x.type = "text";
+                $('#eyeShow').show();
+                $('#eyeSlash').hide();
+            }else {
+                x.type = "password";
+                $('#eyeShow').hide();
+                $('#eyeSlash').show();
+            }
+        }
+    </script>
+
+    <script>
+        function visibility4() {
+            var x = document.getElementById('password-confirm');
+            if (x.type === 'password') {
+                x.type = "text";
+                $('#eye_Show').show();
+                $('#eye_Slash').hide();
+            }else {
+                x.type = "password";
+                $('#eye_Show').hide();
+                $('#eye_Slash').show();
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -63,16 +63,22 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group">
-                                            <input id="password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                            <input id="login_password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                             @error('password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                             @enderror
-                                            <div class="input-group-append">
-                                                <span class="input-group-text"><span class="feather-icon"><i data-feather="eye-off"></i></span></span>
-                                            </div>
+{{--                                            <div class="input-group-append">--}}
+{{--                                                <span class="input-group-text"><span class="feather-icon"><i data-feather="eye-off"></i></span></span>--}}
+{{--                                            </div>--}}
+                                            <span class="input-group-btn" id="eyeSlash">
+                                               <button class="btn btn-default reveal" onclick="visibility3()" type="button"><i class="fa fa-eye-slash" aria-hidden="true"></i></button>
+                                             </span>
+                                            <span class="input-group-btn" id="eyeShow" style="display: none;">
+                                               <button class="btn btn-default reveal" onclick="visibility3()" type="button"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                             </span>
                                         </div>
                                     </div>
                                     <div class="custom-control custom-checkbox mb-25">
@@ -81,11 +87,11 @@
                                         <label class="custom-control-label font-14" for="same-address">Keep me logged in</label>
                                     </div>
                                     <button class="btn btn-primary btn-block" type="submit">Login</button>
-                                    @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                    @endif
+{{--                                    @if (Route::has('password.request'))--}}
+{{--                                    <a class="btn btn-link" href="{{ route('password.request') }}">--}}
+{{--                                        {{ __('Forgot Your Password?') }}--}}
+{{--                                    </a>--}}
+{{--                                    @endif--}}
 
                                     <p class="text-center">Do have an account yet? <a href="{{ route('register') }}">Sign Up</a></p>
                                 </form>
@@ -120,6 +126,21 @@
 
     <!-- Init JavaScript -->
     <script src="dist/js/init.js"></script>
+
+    <script>
+        function visibility3() {
+            var x = document.getElementById('login_password');
+            if (x.type === 'password') {
+                x.type = "text";
+                $('#eyeShow').show();
+                $('#eyeSlash').hide();
+            }else {
+                x.type = "password";
+                $('#eyeShow').hide();
+                $('#eyeSlash').show();
+            }
+        }
+    </script>
 </body>
 
 </html>
