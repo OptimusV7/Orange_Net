@@ -81,6 +81,7 @@ class PackageController extends Controller
 
                 $callBack = Callback::latest('PhoneNumber', $request->phone)->first();
 
+
                 if ($callBack != null) {
                     $result = $callBack['ResultCode'];
                     $resultDesc = $callBack['ResultDesc'];
@@ -90,12 +91,7 @@ class PackageController extends Controller
                     }
                 }
 
-
                 sleep(20);
-
-                $phone = $request->phone;
-
-                $callBack = Callback::latest('PhoneNumber', $phone)->first();
 
                 $result = $callBack['ResultCode'];
 
@@ -115,6 +111,7 @@ class PackageController extends Controller
 
                 $existingSub = Subscription::where('user_id', $sub['user_id'])->get();
                 if ($existingSub->isEmpty()) {
+                    Log::info("Wapi sasa 123");
                     $requestCon['amount'] = $request->amount;
                     $requestCon['phone'] = $request->phone;
                     $requestCon['username'] = auth()->user()->email;
@@ -126,6 +123,8 @@ class PackageController extends Controller
                     Subscription::create($sub);
                     return redirect()->route('subscriptions')->with('success', 'Payment Received!');
                 } else {
+                    Log::info("Wapi sasa 1234");
+                    Log::info($existingSub->id);
                     $subscription = Subscription::find($existingSub->id);
                     if ($subscription != null) {
                         $sub['subscription_status'] = "Deactivated";

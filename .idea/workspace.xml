@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb5d9c04-bce3-432b-b4c4-89b9811f023a" name="Default Changelist" comment="added check if email has been verified in register and login">
+    <list default="true" id="fb5d9c04-bce3-432b-b4c4-89b9811f023a" name="Default Changelist" comment="made password and confirm pass toggle in login and reg pages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PackageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PackageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -254,7 +252,10 @@
       <workItem from="1628077507682" duration="10000" />
       <workItem from="1628104722905" duration="13162000" />
       <workItem from="1628489028090" duration="9765000" />
-      <workItem from="1628537875839" duration="21623000" />
+      <workItem from="1628537875839" duration="21793000" />
+      <workItem from="1628761312236" duration="2911000" />
+      <workItem from="1628837476854" duration="714000" />
+      <workItem from="1628838560066" duration="381000" />
     </task>
     <task id="LOCAL-00001" summary="Then we Arrived">
       <created>1616416185659</created>
@@ -396,7 +397,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628666722215</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="made password and confirm pass toggle in login and reg pages">
+      <created>1628668662839</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1628668662839</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,7 +452,8 @@
     <MESSAGE value="fixed balance issue" />
     <MESSAGE value="added verification and send mail by sendgrid" />
     <MESSAGE value="added check if email has been verified in register and login" />
-    <option name="LAST_COMMIT_MESSAGE" value="added check if email has been verified in register and login" />
+    <MESSAGE value="made password and confirm pass toggle in login and reg pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="made password and confirm pass toggle in login and reg pages" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

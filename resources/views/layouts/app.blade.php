@@ -15,6 +15,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9360848754738617"
             crossorigin="anonymous"></script>
 
+
     <!-- vector map CSS -->
     <link href="{{ asset('vendors/vectormap/jquery-jvectormap-2.0.3.css')}}" rel="stylesheet" type="text/css" />
 
