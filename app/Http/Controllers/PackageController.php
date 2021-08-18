@@ -37,6 +37,10 @@ class PackageController extends Controller
         ]);
     }
 
+    public static function logCallback($data){
+        Log::alert("Received callback", $data);
+    }
+
     public function sendRequest(Request $request)
     {
         $this->validator($request->all())->validate();
@@ -62,7 +66,7 @@ class PackageController extends Controller
 
         $stkArrayResponse[] = (array)$trimStkPushSimulation;
 
-        Log::info('stkResponse', $stkArrayResponse);
+        Log::alert('stkResponse', $stkArrayResponse);
 
 
         if ($trimStkPushSimulation->ResponseCode == "0") {
@@ -124,8 +128,8 @@ class PackageController extends Controller
                     return redirect()->route('subscriptions')->with('success', 'Payment Received!');
                 } else {
                     Log::info("Wapi sasa 1234");
-                    Log::info($existingSub->id);
-                    $subscription = Subscription::find($existingSub->id);
+                    Log::info($existingSub[0]->id);
+                    $subscription = Subscription::find($existingSub[0]->id);
                     if ($subscription != null) {
                         $sub['subscription_status'] = "Deactivated";
                         $subscription->update($sub);

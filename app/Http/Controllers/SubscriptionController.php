@@ -9,7 +9,7 @@ class SubscriptionController extends Controller
 {
     public function getSubscription(Request $request){
         $user = auth()->user()->name;
-        $data = Subscription::where('user_id',$user )->orderBy('id','ASC')->paginate(10);
+        $data = Subscription::where('user_id',$user )->orderBy('id','desc')->paginate(10);
         return view('subscription',compact('data'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
 

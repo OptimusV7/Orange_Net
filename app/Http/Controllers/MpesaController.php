@@ -10,6 +10,7 @@ class MpesaController extends Controller
 {
     public function callback(Request $request){
         Log::info("Received callback", $request->all());
+        PackageController::logCallback($request->all());
         $callbackJSONData=file_get_contents('php://input');
         $callbackData=json_decode($callbackJSONData);
         $resultCode=$callbackData->Body->stkCallback->ResultCode;
@@ -62,6 +63,6 @@ class MpesaController extends Controller
     }
 
     public function callbackBalance(Request $request){
-        Log::info("Received balance callback", $request->all());
+        Log::alert("Received balance callback", $request->all());
     }
 }

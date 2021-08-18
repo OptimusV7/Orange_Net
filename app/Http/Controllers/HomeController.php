@@ -23,7 +23,9 @@ class HomeController extends Controller
             ->where([
                 ['user_id', '=', $user]
 
-            ])->first();
+            ])->latest()->first();
+
+        //dd($data->package_name);
 
         if ($data == "")
         {
