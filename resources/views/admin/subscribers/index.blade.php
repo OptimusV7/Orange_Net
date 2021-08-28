@@ -53,10 +53,13 @@
                                                 <td>{{$sub->subscription_date}}</td>
                                                 <td>{{$sub->expire_date}}</td>
                                                 <td>
+                                                    @if($sub->subscription_status == "Payed")
+                                                        <label class="badge badge-success">{{$sub->router_ip}}-{{ $sub->subscription_status }}</label>
+                                                    @endif
                                                     @if($sub->subscription_status == "Active")
                                                         <label class="badge badge-success">{{$sub->router_ip}}-{{ $sub->subscription_status }}</label>
                                                     @endif
-                                                    @if($sub->subscription_status == "Deactivate")
+                                                    @if($sub->subscription_status == "Deactivated")
                                                         <label class="badge badge-danger">{{$sub->router_ip}}-{{ $sub->subscription_status }}</label>
                                                     @endif
                                                 </td>

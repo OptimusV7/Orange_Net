@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb5d9c04-bce3-432b-b4c4-89b9811f023a" name="Default Changelist" comment="check on package controller id issue when you are trying to buy new package with an existing package. Also changed google ads script">
+    <list default="true" id="fb5d9c04-bce3-432b-b4c4-89b9811f023a" name="Default Changelist" comment="fixed error with rebuy new package with an existing package">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MpesaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MpesaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PackageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PackageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubscriptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubscriptionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/logging.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/logging.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/subscription.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subscription.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubscribersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubscribersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/subscribers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/subscribers/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +257,10 @@
       <workItem from="1628761312236" duration="2911000" />
       <workItem from="1628837476854" duration="714000" />
       <workItem from="1628838560066" duration="1561000" />
-      <workItem from="1629277413346" duration="6163000" />
+      <workItem from="1629277413346" duration="7492000" />
+      <workItem from="1629380846957" duration="1219000" />
+      <workItem from="1630067857160" duration="1888000" />
+      <workItem from="1630171933291" duration="31000" />
     </task>
     <task id="LOCAL-00001" summary="Then we Arrived">
       <created>1616416185659</created>
@@ -416,7 +416,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628838964792</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fixed error with rebuy new package with an existing package">
+      <created>1629287440795</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1629287440795</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +473,8 @@
     <MESSAGE value="added check if email has been verified in register and login" />
     <MESSAGE value="made password and confirm pass toggle in login and reg pages" />
     <MESSAGE value="check on package controller id issue when you are trying to buy new package with an existing package." />
-    <option name="LAST_COMMIT_MESSAGE" value="check on package controller id issue when you are trying to buy new package with an existing package." />
+    <MESSAGE value="fixed error with rebuy new package with an existing package" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed error with rebuy new package with an existing package" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

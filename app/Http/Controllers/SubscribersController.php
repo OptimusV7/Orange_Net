@@ -12,7 +12,7 @@ class SubscribersController extends Controller
     public function index(Request $request)
     {
         $data = Subscription::leftjoin('users', 'users.name', '=', 'subscriptions.user_id')
-            ->leftjoin('router_users', 'router_users.username', '=', 'subscriptions.user_id')
+            ->leftjoin('router_users', 'router_users.username', '=', 'subscriptions.user_id')->orderBy('id','desc')
             ->paginate(10,['subscriptions.*', 'users.account_number',  'router_users.router_ip']);
 //        $data = Subscription::join('router_users', 'router_users.username', '=', 'subscriptions.user_id')
 //            ->paginate(10,['subscriptions.*',  'router_users.router_ip'])->;
