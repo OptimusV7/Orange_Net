@@ -16,6 +16,8 @@
 
     <!-- Custom CSS -->
     <link href="dist/css/style.css" rel="stylesheet" type="text/css">
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 
 <body>
@@ -40,7 +42,7 @@
                                 <a class="auth-brand text-center d-block mb-20" href="{{url('/')}}" style="color: #32cd32">
                                     {{env('APP_NAME')}}
                                 </a>
-                                <form method="POST" action="{{ route('register') }}">
+                                <form id="reg_form" method="POST" action="{{ route('register') }}">
                                     @csrf
                                     <h1 class="display-4 mb-10 text-center">Sign up for free</h1>
                                     <p class="mb-30 text-center">Create your account </p>
@@ -95,7 +97,9 @@
                                         <input class="custom-control-input" id="same-address" type="checkbox" checked>
                                         <label class="custom-control-label font-14" for="same-address">I have read and agree to the <a href=""><u>term and conditions</u></a></label>
                                     </div>
-                                    <button class="btn btn-primary btn-block" type="submit">Register</button>
+                                    <button class="g-recaptcha btn btn-primary btn-block" data-sitekey={{env('RECAPTURE')}}
+                                            data-callback='onSubmit' data-action='submit' type="submit">Register</button>
+
 
                                     <p class="text-center">Already have an account? <a href="{{ route('login') }}">Sign In</a></p>
                                 </form>
@@ -160,6 +164,12 @@
                 $('#eye_Show').hide();
                 $('#eye_Slash').show();
             }
+        }
+    </script>
+
+    <script>
+        function onSubmit(token) {
+            document.getElementById("reg_form").submit();
         }
     </script>
 </body>

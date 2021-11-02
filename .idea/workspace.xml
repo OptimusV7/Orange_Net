@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb5d9c04-bce3-432b-b4c4-89b9811f023a" name="Default Changelist" comment="fixed error with rebuy new package with an existing package">
+    <list default="true" id="fb5d9c04-bce3-432b-b4c4-89b9811f023a" name="Default Changelist" comment="removed some info from welcome page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubscribersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubscribersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/subscribers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/subscribers/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +258,12 @@
       <workItem from="1629277413346" duration="7492000" />
       <workItem from="1629380846957" duration="1219000" />
       <workItem from="1630067857160" duration="1888000" />
-      <workItem from="1630171933291" duration="31000" />
+      <workItem from="1630171933291" duration="364000" />
+      <workItem from="1631600140622" duration="28000" />
+      <workItem from="1632379693940" duration="677000" />
+      <workItem from="1635855759669" duration="7000" />
+      <workItem from="1635855817354" duration="305000" />
+      <workItem from="1635856161923" duration="695000" />
     </task>
     <task id="LOCAL-00001" summary="Then we Arrived">
       <created>1616416185659</created>
@@ -423,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629287440795</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="removed some info from welcome page">
+      <created>1630172286749</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1630172286749</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -474,7 +484,8 @@
     <MESSAGE value="made password and confirm pass toggle in login and reg pages" />
     <MESSAGE value="check on package controller id issue when you are trying to buy new package with an existing package." />
     <MESSAGE value="fixed error with rebuy new package with an existing package" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed error with rebuy new package with an existing package" />
+    <MESSAGE value="removed some info from welcome page" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed some info from welcome page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
